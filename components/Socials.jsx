@@ -1,33 +1,38 @@
 'use client'
 
 import {RiInstagramFill, RiGithubFill, RiLinkedinFill} from 'react-icons/ri';
-import Link from 'next/link';
 
 const icons = [
     {
-        path:'/',
+        path:'https://www.instagram.com/gillpaan_',
         name: <RiInstagramFill />,
     },
     {
-        path:'/',
+        path:'https://github.com/gillpann',
         name: <RiGithubFill />,
     },
     {
-        path:'/',
+        path:'https://www.linkedin.com/in/satria-ahmad-gilvan-pundong',
         name: <RiLinkedinFill />,
     },
 ];
 
-const Socials = ({containerStyles, iconsStyles}) => {
+const Socials = ({ containerStyles, iconsStyles }) => {
     return (
         <div className={`${containerStyles}`}>
-            {icons.map((icon, index)=> {
-                return <Link href={icon.path} key={index}>
-                <div className={`${iconsStyles}`}>{icon.name}</div>
-                </Link>
-            })}
+            {icons.map((icon, index) => (
+                <a
+                    key={index}
+                    href={icon.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={iconsStyles}
+                >
+                    {icon.name}
+                </a>
+            ))}
         </div>
-    )
+    );
 };
 
 export default Socials

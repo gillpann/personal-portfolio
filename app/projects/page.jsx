@@ -17,7 +17,7 @@ const projectData = [
         image: '/work/2.PNG',
         category: 'Front End',
         name: 'Login page',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, neque!',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aspernatur adipisci? Quae minima laboriosam vel quisquam! Quisquam minima, quas tempore alias harum reiciendis necessitatibus sunt iure tempora nisi iste maxime aliquid adipisci veniam quasi dignissimos doloribus assumenda distinctio omnis. Maiores culpa aliquam, harum distinctio rem dolorum tenetur praesentium dolores et?',
         link: '/',
         github: '/',
     },

@@ -1,11 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardHeader } from "./ui/card"
-import { Github, Link2Icon} from 'lucide-react'
+import { Github} from 'lucide-react'
 import { Badge } from "./ui/badge"
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "./ui/dialog"
 import { Button } from "./ui/button"
-import { X } from "lucide-react";
 import { ArrowRightIcon } from "lucide-react";
 import { Eye } from "lucide-react";
 

@@ -118,7 +118,24 @@
 
 .dialog-content {
   @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg w-full bg-white p-8 rounded-lg shadow-lg;
-  z-index: 9999;
+  z-index: 9998;
+}
+
+/* back to top button */
+@keyframes smooth-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.smooth-bounce {
+  animation: smooth-bounce 2s infinite;
 }
 
 
