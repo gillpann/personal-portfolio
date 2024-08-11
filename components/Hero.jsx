@@ -17,7 +17,7 @@ import Socials from "./Socials";
 
 const Hero = () => {
     const texts = [
-        "I'm a Front End Developer",
+        "Front End Developer",
         "UI/UX Designer",
         // more
     ];
@@ -31,8 +31,8 @@ const Hero = () => {
                     <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[2px] ">Hi there👋, my name is</div>
                     <h1 className='h1 mb-4'>Satria Ahmad Gilvan</h1>
                     {/* Typing Animation */}
-                    <div className="h3 font-bold mb-4">
-                        <TypingAnimation texts={texts} speed={100} eraseSpeed={50} delay={1500} />
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 whitespace-nowrap">
+                        <span>I'm a <TypingAnimation texts={texts} speed={100} eraseSpeed={50} delay={1500} /></span>
                     </div>
                     <p className='subtitle max-w-[490px] mx-auto xl:mx-0'>
                         I am passionate about technology and dedicated to advancing my skills in computer science.
