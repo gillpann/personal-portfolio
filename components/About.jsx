@@ -107,18 +107,18 @@ const About = () => {
     // console.log(getData(qualificationData, "experience"));
     
     return (
-        <section className="xl:h-[800px] pb-4 xl:py-8 xl:mt-4" >
+        <section className="py-12 xl:py-20" >
             <div className="container mx-auto">
                 <h2 className="section-title pt-4 mb-8 xl:mb-16 text-center mx-auto">About me</h2>
             </div>
-            <div className="flex flex-col xl:flex-row">
+            <div className="flex flex-col xl:flex-row gap-y-8 xl:gap-x-8">
                 {/* image */}
-                <div className="hidden xl:flex flex-1 relative justify-center">
+                <div className="flex-1 relative justify-center">
                     {/* SVG for Light Theme */}
-                    <img src="/about/dev-light.svg" alt="Ilustrasi Gilvan Light Theme" className="w-[400px] h-[400px] object-contain mx-auto dark:hidden"/>
+                    <img src="/about/dev-light.svg" alt="Ilustrasi Gilvan Light Theme" className="w-full h-auto max-w-[400px mx-auto dark:hidden"/>
 
                     {/* SVG for Dark Theme */}
-                    <img src="/about/dev-dark.svg" alt="Ilustrasi Gilvan Dark Theme" className="w-[400px] h-[400px] object-contain mx-auto hidden dark:block"/>
+                    <img src="/about/dev-dark.svg" alt="Ilustrasi Gilvan Dark Theme" className="w-full h-auto max-w-[400px mx-auto hidden dark:block"/>
                 </div>
                 {/* tabs */}
                 <div className="flex-1">

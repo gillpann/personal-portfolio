@@ -23,11 +23,11 @@ const Hero = () => {
     ];
 
     return (
-        <section className="py-12 xl:py-20 h-[84vh] xl:pt-16">
+        <section className="py-12 xl:py-20 min-h-screen xl:min-h-[84vh] xl:pt-16">
         <div className="container max-w-screen-xl mx-auto px-4">
-            <div className="flex justify-between gap-x-8">
+            <div className="flex flex-col xl:flex-row xl:justify-between gap-y-8 xl:gap-x-8">
                 {/* {text} */}
-                <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
+                <div className="flex flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
                     <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[2px] ">Hi there👋, my name is</div>
                     <h1 className='h1 mb-4'>Satria Ahmad Gilvan</h1>
                     {/* Typing Animation */}
@@ -71,7 +71,7 @@ const Hero = () => {
             </div>
 
             {/* {icon} */}
-            <div className="hidden md:flex absolute left-1/2 bottom-58 xl:bottom-8 animate-bounce">
+            <div className="hidden md:flex absolute left-1/2 bottom-58 bottom-8 xl:bottom-8 animate-bounce">
                 <RiArrowDownSLine className="text-3xl text-primary" />
             </div>
         </div>

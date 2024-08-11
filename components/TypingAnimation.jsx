@@ -45,7 +45,7 @@ const TypingAnimation = ({
   }, [index, phase, textIndex, texts, speed, eraseSpeed, delay]);
 
   return (
-    <span className="inline-block border-r-2 border-gray-500 animate-blink">
+    <span className="inline-block border-r-2 border-gray-500 animate-blink text-primary">
       {displayText}
     </span>
   );
