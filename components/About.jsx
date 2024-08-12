@@ -1,4 +1,3 @@
-import DevImg from "./DevImg";
 import Image from "next/image";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
@@ -108,12 +107,12 @@ const About = () => {
     
     return (
         <section className="py-12 xl:py-20" >
-            <div className="container mx-auto">
+            <div className="container mx-auto" data-aos="fade-up">
                 <h2 className="section-title pt-4 mb-8 xl:mb-16 text-center mx-auto">About me</h2>
             </div>
             <div className="flex flex-col xl:flex-row gap-y-8 xl:gap-x-8">
                 {/* image */}
-                <div className="flex-1 relative justify-center">
+                <div className="flex-1 relative justify-center" data-aos="fade-right">
                     {/* SVG for Light Theme */}
                     <img src="/about/dev-light.svg" alt="Ilustrasi Gilvan Light Theme" className="w-full h-auto max-w-[400px mx-auto dark:hidden"/>
 
@@ -123,7 +122,7 @@ const About = () => {
                 {/* tabs */}
                 <div className="flex-1">
                     <Tabs defaultValue="personal">
-                        <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
+                        <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none' data-aos="zoom-in-up">
                             <TabsTrigger className='w-[162px] xl:w-auto' value="personal">Personal Info</TabsTrigger>
                             <TabsTrigger className='w-[162px] xl:w-auto' value="qualifications">Qualfications</TabsTrigger>
                             <TabsTrigger className='w-[162px] xl:w-auto' value="skills">Tech Stack</TabsTrigger>
@@ -131,8 +130,8 @@ const About = () => {
                         {/* tabs content */}
                         <div className="text-lg ml-4 mt-12 xl:mt-8">
                             {/* personal */}
-                            <TabsContent value="personal">
-                                <div className="text-center xl:text-left">
+                            <TabsContent value="personal" data-aos="fade-up">
+                                <div className="text-center xl:text-left"  data-aos="fade-up">
                                     <h3 className="h3 mb-4">The Person Behind the Code</h3>
                                     <p className="subtitle max-w-xl mx-auto xl:mx-0 px-5 xl:px-0">Hello everyone! As an intermediate-level developer, I am constantly exploring new technologies and honing my skills. I'm adaptable and can thrive in both solo and team environments, always aiming to deliver exceptional results</p>
                                     {/* icons */}
@@ -150,7 +149,7 @@ const About = () => {
                             </TabsContent>
                             {/* qualifications */}
                             <TabsContent value="qualifications">
-                                <div>
+                                <div  data-aos="fade-up">
                                     <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
                                     {/* experience & education */}
                                     <div className="grid md:grid-cols-2 gap-8">
@@ -215,7 +214,7 @@ const About = () => {
                             </TabsContent>
                             {/* skills */}
                             <TabsContent value="skills">
-                                <div className="text-center xl:text-left">
+                                <div className="text-center xl:text-left" data-aos="fade-up">
                                     <h3 className="h3 mb-8">My Core Technologies & Skills</h3>
                                     <div className='mb-16'>
                                         <h4 className="text-xl font-semibold mb-2">Skills</h4>

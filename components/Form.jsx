@@ -7,7 +7,7 @@ import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react"
 
 const Form = () => {
     return (
-        <form className="flex flex-col gap-y-4">
+        <form className="flex flex-col gap-y-4" data-aos="fade-up">
             {/* input */}
             <div className="relative flex items-center">
                 <Input type="name" id="name" placeholder="Name"/>
@@ -23,7 +23,7 @@ const Form = () => {
                 <Textarea placeholder="Type Your Message Here."/>
                 <MessageSquare className="absolute top-4 right-6" size={20}/>
             </div>
-            <Button className="flex items-center gap-x-1 max-w-[166px]">Let's Talk
+            <Button className="flex items-center gap-x-1 max-w-[166px]" data-aos="zoom-in">Let's Talk
                 <ArrowRightIcon size={20}/>
             </Button>
         </form>

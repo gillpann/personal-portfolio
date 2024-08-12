@@ -22,7 +22,7 @@ const header = () => {
 
     return (
         <header className={`${header ? 'py-4 bg-white shadow-lg dark:bg-accent' : 'py-6 dark:bg-transparent'}  sticky top-0 z-30 transition-all ${pathname === '/' && 'bg-[hsl(var(--muted))]'}`}>
-            <div className="container max-w-screen-xl mx-auto px-4">
+            <div className="container max-w-screen-xl mx-auto px-4" data-aos="fade-down">
                 <div className='flex justify-between items-center'>
                     <Logo />
                     <div className='flex items-center gap-x-6'>

@@ -23,17 +23,17 @@ const Services = () => {
     return (
         <section className='mb-4 xl:mb-8'>
         <div className='container mx-auto'>
-            <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>My Services</h2>
+            <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto' data-aos="fade-up">My Services</h2>
             {/* grid items */}
             <div className='grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8'>
             {servicesData.map((item, index) => (
                 <Card key={index} className='w-full max-w-[424px] flex flex-col items-center p-6 relative'>
                 <div className='absolute top-[-35px]'>
-                    <div className='w-[100px] h-[100px] text-primary bg-white dark:bg-background flex justify-center items-center'>
+                    <div className='w-[100px] h-[100px] text-primary bg-white dark:bg-background flex justify-center items-center' data-aos="zoom-in">
                     {item.icon}
                     </div>
                 </div>
-                <CardContent className='pt-[50px] text-center'>
+                <CardContent className='pt-[50px] text-center' data-aos="fade-up">
                     <CardTitle className='mb-4 text-lg font-semibold'>{item.title}</CardTitle>
                     <CardDescription className='text-base'>{item.description}</CardDescription>
                 </CardContent>
