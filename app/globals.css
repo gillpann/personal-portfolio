@@ -140,4 +140,8 @@
   animation: smooth-bounce 2s infinite;
 }
 
-
+.gradient-text {
+  background: linear-gradient(90deg, #00dfdf, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
