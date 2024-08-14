@@ -12,7 +12,7 @@ const Footer = () => {
             />
             {/* copyright */}
             <div className="text-white">
-                &copy; 2024 Create by Ahmad Gilvan. All rights reserved.
+                &copy; 2024 Created by Ahmad Gilvan. All rights reserved.
             </div>
             </div>
         </div>
