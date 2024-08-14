@@ -11,7 +11,7 @@ const Footer = () => {
                 iconsStyles="text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
             />
             {/* copyright */}
-            <div className="text-white">
+            <div className="text-white whitespace-nowrap">
                 &copy; 2024 Created by Ahmad Gilvan. All rights reserved.
             </div>
             </div>
