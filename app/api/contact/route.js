@@ -14,8 +14,8 @@ export async function POST(req) {
 
     try {
         await transporter.sendMail({
-        from: email, // Pengirim email, bisa berbeda dari penerima
-        to: process.env.EMAIL_USER, // Penerima email
+        from: email, 
+        to: process.env.EMAIL_USER, 
         subject: `New message from ${name}`,
         text: message,
         html: `
