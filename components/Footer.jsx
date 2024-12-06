@@ -2,7 +2,7 @@ import Socials from "./Socials";
 
 const Footer = () => {
     return (
-        <footer className="bg-secondary py-12">
+        <footer className="bg-secondary py-6 md:py-12">
         <div className="container mx-auto">
             <div className="flex flex-col items-center justify-between">
             {/* socials */}
@@ -11,7 +11,7 @@ const Footer = () => {
                 iconsStyles="text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
             />
             {/* copyright */}
-            <div className="text-white whitespace-nowrap">
+            <div className="text-white text-sm md:text-base whitespace-nowrap">
                 &copy; 2024 Created by Ahmad Gilvan. All rights reserved.
             </div>
             </div>
