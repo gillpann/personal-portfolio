@@ -107,7 +107,7 @@ const Projects = () => {
                         })}
                     </TabsList>
                     {/* tabs content */}
-                    <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4" data-aos="fade-up">
                         {filteredProjects.map((project, index) => {
                             return <TabsContent value={category} key={index}>
                                 <ProjectCard project={project}/>
