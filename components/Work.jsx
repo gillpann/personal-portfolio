@@ -61,8 +61,7 @@ const Work = () => {
                 {/* show only the first 4 project for the slides */}
                 {projectData.slice(0, 4).map((project, index) => {
                 return (
-                    <SwiperSlide key={index} data-aos="zoom-in"
-                    data-aos-delay={700 + (index * 200)}>
+                    <SwiperSlide key={index}>
                     <ProjectCard project={project} />
                     </SwiperSlide>
                 );

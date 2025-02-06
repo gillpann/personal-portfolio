@@ -102,7 +102,7 @@ const Form = () => {
             type="submit"
             disabled={isSubmitting}
             data-aos="zoom-in"
-            data-aos-delay="600"
+            data-aos-delay="500"
         >
             {isSubmitting ? "Sending..." : "Let's Talk"}
             <ArrowRightIcon size={20} />

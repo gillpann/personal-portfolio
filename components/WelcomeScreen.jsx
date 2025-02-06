@@ -4,29 +4,34 @@ import { useEffect, useState } from "react";
 import Socials from "@/components/Socials";
 
 const WelcomeScreen = () => {
-    const [isVisible, setIsVisible] = useState(true);
-    const [fadeOut, setFadeOut] = useState(false); 
+    const [isVisible, setIsVisible] = useState(false);
+    const [fadeOut, setFadeOut] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-        setFadeOut(true); 
-        }, 3500); 
+        
+        const hasSeenWelcome = localStorage.getItem("welcomeScreenShown");
 
+        if (!hasSeenWelcome) {
+        setIsVisible(true); 
+
+        const fadeTimer = setTimeout(() => setFadeOut(true), 3500); 
         const hideTimer = setTimeout(() => {
-        setIsVisible(false); 
+            setIsVisible(false);
+            localStorage.setItem("welcomeScreenShown", "true"); 
         }, 4500); 
 
         return () => {
-        clearTimeout(timer);
-        clearTimeout(hideTimer);
+            clearTimeout(fadeTimer);
+            clearTimeout(hideTimer);
         };
+        }
     }, []);
 
     if (!isVisible) return null;
 
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-white dark:bg-black transition-all duration-1000">
-        <div className="absolute inset-0 bg-white dark:bg-black z-10"></div>{" "}
+        <div className="absolute inset-0 bg-white dark:bg-black z-10"></div>
         <div
             className={`text-center z-20 transition-all duration-1000 ${
             fadeOut ? "opacity-0" : "opacity-100"

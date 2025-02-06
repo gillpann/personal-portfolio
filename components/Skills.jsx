@@ -14,7 +14,7 @@ import { skillsData } from "@/data/skillsData";
 
 const SkillItem = ({ name, level, icon, description }) => {
   return (
-    <TooltipProvider>
+    <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger>
           <motion.div
@@ -56,10 +56,12 @@ const Skills = () => {
             data-aos-delay="300"
           >
             <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Tech Stack <Cpu className="inline-block w-7 h-7 text-primary" />
+              Tech Stack{" "}
+              <span className="notranslate text-black dark:text-white">⚙️</span>
             </h3>
             <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              & Tools <Wrench className="inline-block w-7 h-7 text-primary" />
+              & Tools{" "}
+              <span className="notranslate text-black dark:text-white">🛠️</span>
             </h3>
             <p className="text-muted-foreground text-base">
               Technologies and tools I've learned and experienced
@@ -128,11 +130,12 @@ const Skills = () => {
           >
             <div className="space-y-4">
               <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Tech Stack <Cpu className="inline-block w-8 h-8 text-primary" />
+                Tech Stack ⚙️
               </h3>
               <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                & Tools <Wrench className="inline-block w-8 h-8 text-primary" />
+                & Tools 🛠️
               </h3>
+
               <p className="text-muted-foreground text-lg">
                 Technologies and tools I've learned and experienced
               </p>
