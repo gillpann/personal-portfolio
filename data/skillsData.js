@@ -1,0 +1,120 @@
+export const skillsData = {
+  tech: [
+    {
+      name: "HTML",
+      level: "Advanced",
+      icon: "/skills/html.svg",
+      description: "Semantic markup and web structure fundamentals",
+    },
+    {
+      name: "CSS",
+      level: "Advanced",
+      icon: "/skills/css.svg",
+      description: "Responsive design and CSS preprocessors",
+    },
+    {
+      name: "JavaScript",
+      level: "Intermediate",
+      icon: "/skills/javascript.svg",
+      description: "DOM manipulation and modern ES6+ features",
+    },
+    {
+      name: "Java",
+      level: "Intermediate",
+      icon: "/skills/java.svg",
+      description: "Object-oriented programming and application development",
+    },
+    {
+      name: "Python",
+      level: "Intermediate",
+      icon: "/skills/python.svg",
+      description: "Scripting and backend development capabilities",
+    },
+    {
+      name: "Tailwind",
+      level: "Intermediate",
+      icon: "/skills/tailwindcss.svg",
+      description: "Utility-first CSS framework implementation",
+    },
+    {
+      name: "Bootstrap",
+      level: "Intermediate",
+      icon: "/skills/bootstrap.svg",
+      description: "Rapid responsive layout development",
+    },
+    {
+      name: "React JS",
+      level: "Intermediate",
+      icon: "/skills/react.svg",
+      description: "Component-based UI development",
+    },
+    {
+      name: "Next JS",
+      level: "Intermediate",
+      icon: "/skills/nextjs.svg",
+      description: "Server-side rendering and static site generation",
+    },
+    {
+      name: "TypeScript",
+      level: "Intermediate",
+      icon: "/skills/typescript.svg",
+      description: "Type-safe JavaScript development",
+    },
+    {
+      name: "Vite",
+      level: "Intermediate",
+      icon: "/skills/vite.svg",
+      description: "Frontend build tool and development server",
+    },
+    {
+      name: "Node JS",
+      level: "Intermediate",
+      icon: "/skills/nodejs.svg",
+      description: "Server-side JavaScript runtime environment",
+    },
+    {
+      name: "PHP",
+      level: "Intermediate",
+      icon: "/skills/php.svg",
+      description: "Web-focused server-side scripting",
+    },
+    {
+      name: "MySQL",
+      level: "Intermediate",
+      icon: "/skills/mysql.svg",
+      description: "Relational database management and querying",
+    },
+  ],
+  tools: [
+    {
+      name: "VS Code",
+      level: "Basic",
+      icon: "/skills/vscode.svg",
+      description: "Code editor with extension ecosystem",
+    },
+    {
+      name: "GitHub",
+      level: "Basic",
+      icon: "/skills/github.svg",
+      description: "Code repository and collaboration platform",
+    },
+    {
+      name: "Git",
+      level: "Basic",
+      icon: "/skills/git.svg",
+      description: "Version control system fundamentals",
+    },
+    {
+      name: "Figma",
+      level: "Basic",
+      icon: "/skills/figma.svg",
+      description: "Interface design and prototyping tool",
+    },
+    {
+      name: "Andorid Studio",
+      level: "Basic",
+      icon: "/skills/android.svg",
+      description: "Android application development environment",
+    },
+  ],
+};
