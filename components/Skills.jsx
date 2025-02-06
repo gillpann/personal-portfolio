@@ -42,14 +42,19 @@ const Skills = () => {
     <section className="py-12 xl:py-24 mb-12 xl:mb-24">
       <div className="container mx-auto">
         {/* Mobile Layout: Skills Title on Top */}
-          <h2
-            className="section-title mb-6 text-center mx-auto"
-            data-aos="fade-up"
-          >
-            Skills
-          </h2>
+        <h2
+          className="section-title mb-6 text-center mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Skills
+        </h2>
         <div className="block xl:hidden">
-          <div className="space-y-4 text-center mb-8">
+          <div
+            className="space-y-4 text-center mb-8"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Tech Stack <Cpu className="inline-block w-7 h-7 text-primary" />
             </h3>
@@ -64,7 +69,11 @@ const Skills = () => {
 
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-16">
           {/* Card - Left side in desktop */}
-          <Card className="w-full xl:w-2/3 p-8" data-aos="fade-right">
+          <Card
+            className="w-full xl:w-2/3 p-8"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             <Tabs defaultValue="tech" className="w-full">
               <TabsList className="flex w-full mb-8 rounded-lg bg-muted p-1">
                 <TabsTrigger
@@ -82,17 +91,29 @@ const Skills = () => {
               </TabsList>
 
               <TabsContent value="tech">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
                   {skillsData.tech.map((item, index) => (
-                    <SkillItem key={index} {...item} />
+                    <div
+                      key={index}
+                      data-aos="zoom-in"
+                      data-aos-delay={500 + index * 100}
+                    >
+                      <SkillItem {...item} />
+                    </div>
                   ))}
                 </div>
               </TabsContent>
 
               <TabsContent value="tools">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
                   {skillsData.tools.map((item, index) => (
-                    <SkillItem key={index} {...item} />
+                    <div
+                      key={index}
+                      data-aos="zoom-in"
+                      data-aos-delay={500 + index * 100}
+                    >
+                      <SkillItem {...item} />
+                    </div>
                   ))}
                 </div>
               </TabsContent>
@@ -103,6 +124,7 @@ const Skills = () => {
           <div
             className="hidden xl:flex xl:w-1/3 items-center"
             data-aos="fade-left"
+            data-aos-delay="600"
           >
             <div className="space-y-4">
               <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">

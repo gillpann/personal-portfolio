@@ -49,7 +49,7 @@ const WelcomeScreen = () => {
             </div>
 
             <h1
-            className="text-4xl uppercase md:text-6xl font-bold text-primary whitespace-nowrap"
+            className="text-3xl uppercase sm:text-4xl md:text-6xl font-bold text-primary whitespace-nowrap"
             data-aos="fade-up"
             >
             Portfolio Website

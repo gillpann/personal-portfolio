@@ -25,12 +25,18 @@ const Work = () => {
             <div
             className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start mt-10"
             data-aos="fade-right"
+            data-aos-delay="200"
             >
-            <h2 className="section-title mb-4">Latest Project</h2>
-            <p className="subtitle mb-8">
+            <h2 className="section-title mb-4" data-aos="fade-up"
+            data-aos-delay="300">
+                Latest Project
+            </h2>
+            <p className="subtitle mb-8" data-aos="fade-up"
+            data-aos-delay="400">
                 Here are some of my latest projects. Click below to explore more.
             </p>
-            <Link href="/projects">
+            <Link href="/projects" data-aos="zoom-in"
+                data-aos-delay="500">
                 <Button>All Project</Button>
             </Link>
             </div>
@@ -38,6 +44,7 @@ const Work = () => {
             <div
             className="xl:max-w-[800px] xl:absolute right-0 top-0"
             data-aos="fade-left"
+            data-aos-delay="600"
             >
             <Swiper
                 className="h-[480px]"
@@ -54,7 +61,8 @@ const Work = () => {
                 {/* show only the first 4 project for the slides */}
                 {projectData.slice(0, 4).map((project, index) => {
                 return (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} data-aos="zoom-in"
+                    data-aos-delay={700 + (index * 200)}>
                     <ProjectCard project={project} />
                     </SwiperSlide>
                 );

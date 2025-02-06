@@ -7,11 +7,11 @@ const Cta = () => {
         <section className="py-24 bg-tertiary dark:bg-secondary/40">
         <div className="container mx-auto">
             <div className="flex flex-col items-center">
-            <h2 className="h2 max-w-xl text-center mb-8" data-aos="fade-up">
+            <h2 className="h2 max-w-xl text-center mb-8" data-aos="fade-up" data-aos-delay="200">
                 Prepared to turn your ideas into reality? Let's make it happen!
             </h2>
             <Link href="/contact">
-                <Button className="gap-x-2 dark:text-white" data-aos="zoom-in">
+                <Button className="gap-x-2 dark:text-white" data-aos="zoom-in" data-aos-delay="300">
                 Let's Talk <Send size={18} />
                 </Button>
             </Link>

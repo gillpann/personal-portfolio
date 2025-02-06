@@ -82,7 +82,7 @@ const About = () => {
         </div>
         <div className="flex flex-col xl:flex-row gap-y-8 xl:gap-x-8">
             {/* image */}
-            <div className="flex-1 relative justify-center" data-aos="fade-right">
+            <div className="flex-1 relative justify-center" data-aos="fade-right" data-aos-delay="200">
             {/* SVG for Light Theme */}
             <img
                 src="/about/dev-light.svg"
@@ -102,7 +102,7 @@ const About = () => {
             <Tabs defaultValue="personal">
                 <TabsList
                 className="w-full grid xl:grid-cols-2 xl:max-w-[360px] xl:border dark:border-none"
-                data-aos="zoom-in-up"
+                data-aos="zoom-in-up" data-aos-delay="300"
                 >
                 <TabsTrigger className="w-[180px] xl:w-auto" value="personal">
                     Personal Info
@@ -118,9 +118,9 @@ const About = () => {
                 <div className="text-lg ml-4 mt-12 xl:mt-8">
                 {/* personal */}
                 <TabsContent value="personal" data-aos="fade-up">
-                    <div className="text-center xl:text-left" data-aos="fade-up">
-                    <h3 className="h3 mb-4">The Person Behind the Code</h3>
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0 px-5 xl:px-0">
+                    <div className="text-center xl:text-left">
+                    <h3 className="h3 mb-4" data-aos="fade-up" data-aos-delay="400">The Person Behind the Code</h3>
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0 px-5 xl:px-0" data-aos="fade-up" data-aos-delay="500">
                         Hello everyone! As an intermediate-level developer, I am
                         constantly exploring new technologies and honing my skills.
                         I'm adaptable and can thrive in both solo and team
@@ -132,7 +132,8 @@ const About = () => {
                         return (
                             <div
                             className="flex items-center gap-x-4 mx-auto xl:mx-0"
-                            key={index}
+                            key={index} data-aos="fade-up"
+                            data-aos-delay={600 + (index * 100)}
                             >
                             <div className="text-primary">{item.icon}</div>
                             <div>{item.text}</div>
@@ -144,14 +145,14 @@ const About = () => {
                 </TabsContent>
                 {/* qualifications */}
                 <TabsContent value="qualifications">
-                    <div data-aos="fade-up">
-                    <h3 className="h3 mb-8 text-center xl:text-left">
+                    <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left" data-aos="fade-up" data-aos-delay="400">
                         My Awesome Journey
                     </h3>
                     {/* experience & education */}
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* experience */}
-                        <div className="flex flex-col gap-y-6">
+                        <div className="flex flex-col gap-y-6"  data-aos="fade-up" data-aos-delay="500">
                         <div className="flex items-center gap-x-4 text-[22px] text-primary">
                             <Briefcase />
                             <h4 className="capitalize font-medium">
@@ -164,7 +165,8 @@ const About = () => {
                             (item, index) => {
                                 const { company, role, years } = item;
                                 return (
-                                <div className="flex gap-x-8 group" key={index}>
+                                <div className="flex gap-x-8 group" key={index} data-aos="fade-up"
+                                                data-aos-delay={600 + (index * 100)}>
                                     <div className="h-[84px] w-[1px] bg-border relative ml-2">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                     </div>
@@ -186,7 +188,8 @@ const About = () => {
                         </div>
                         </div>
                         {/* education */}
-                        <div className="flex flex-col gap-y-6">
+                        <div className="flex flex-col gap-y-6" data-aos="fade-up"
+                            data-aos-delay="600">
                         <div className="flex items-center gap-x-4 text-[22px] text-primary">
                             <GraduationCap size={28} />
                             <h4 className="capitalize font-medium">
@@ -199,7 +202,8 @@ const About = () => {
                             (item, index) => {
                                 const { university, qualification, years } = item;
                                 return (
-                                <div className="flex gap-x-8 group" key={index}>
+                                <div className="flex gap-x-8 group" key={index}  data-aos="fade-up"
+                                        data-aos-delay={700 + (index * 100)}>
                                     <div className="h-[84px] w-[1px] bg-border relative ml-2">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                     </div>

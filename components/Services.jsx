@@ -34,6 +34,7 @@ const Services = () => {
             <h2
             className="section-title mb-12 xl:mb-24 text-center mx-auto"
             data-aos="fade-up"
+            data-aos-delay="200"
             >
             My Services
             </h2>
@@ -43,16 +44,19 @@ const Services = () => {
                 <Card
                 key={index}
                 className="w-full max-w-[424px] flex flex-col items-center p-6 relative"
+                data-aos="fade-up"
+                data-aos-delay={300 + (index * 200)}
                 >
                 <div className="absolute top-[-35px]">
                     <div
                     className="w-[100px] h-[100px] text-primary bg-white dark:bg-background flex justify-center items-center"
                     data-aos="zoom-in"
+                    data-aos-delay={400 + (index * 200)}
                     >
                     {item.icon}
                     </div>
                 </div>
-                <CardContent className="pt-[50px] text-center" data-aos="fade-up">
+                <CardContent className="pt-[50px] text-center" data-aos="fade-up" data-aos-delay={500 + (index * 200)}>
                     <CardTitle className="mb-4 text-lg font-semibold">
                     {item.title}
                     </CardTitle>

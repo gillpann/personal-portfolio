@@ -59,10 +59,10 @@ const Form = () => {
         <form
         className="flex flex-col gap-y-4"
         onSubmit={handleSubmit}
-        data-aos="fade-up"
+        data-aos="fade-up" data-aos-delay="200"
         >
         {/* Input for Name */}
-        <div className="relative flex items-center">
+        <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="300">
             <Input
             type="text"
             id="name"
@@ -74,7 +74,7 @@ const Form = () => {
         </div>
 
         {/* Input for Email */}
-        <div className="relative flex items-center">
+        <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="400">
             <Input
             type="email"
             id="email"
@@ -86,7 +86,7 @@ const Form = () => {
         </div>
 
         {/* Textarea for Message */}
-        <div className="relative flex items-center">
+        <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="500">
             <Textarea
             id="message"
             placeholder="Type Your Message Here."
@@ -102,6 +102,7 @@ const Form = () => {
             type="submit"
             disabled={isSubmitting}
             data-aos="zoom-in"
+            data-aos-delay="600"
         >
             {isSubmitting ? "Sending..." : "Let's Talk"}
             <ArrowRightIcon size={20} />
