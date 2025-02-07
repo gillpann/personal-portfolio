@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-import { Cpu, Wrench } from "lucide-react";
+import { Code, PencilRuler } from "lucide-react";
 import { skillsData } from "@/data/skillsData";
 
 const SkillItem = ({ name, level, icon, description }) => {
@@ -82,13 +82,13 @@ const Skills = () => {
                   value="tech"
                   className="flex-1 rounded-md text-lg data-[state=active]:bg-primary"
                 >
-                  <Cpu className="w-5 h-5 mr-2" /> Tech Stack
+                  <Code className="w-5 h-5 mr-2" /> Tech Stack
                 </TabsTrigger>
                 <TabsTrigger
                   value="tools"
                   className="flex-1 rounded-md text-lg data-[state=active]:bg-primary"
                 >
-                  <Wrench className="w-5 h-5 mr-2" /> Tools
+                  <PencilRuler className="w-5 h-5 mr-2" /> Tools
                 </TabsTrigger>
               </TabsList>
 
@@ -130,10 +130,12 @@ const Skills = () => {
           >
             <div className="space-y-4">
               <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Tech Stack ⚙️
+                Tech Stack 
+                <span className="notranslate text-black dark:text-white">⚙️</span>
               </h3>
               <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                & Tools 🛠️
+                & Tools 
+                <span className="notranslate text-black dark:text-white">🛠️</span>
               </h3>
 
               <p className="text-muted-foreground text-lg">

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react"
+import { useState } from "react"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import ProjectCard from "@/components/ProjectCard"
 import { projectData } from "@/data/projects"
