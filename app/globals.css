@@ -145,3 +145,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  }
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+  }
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(221.2, 83.2%, 53.3%, 0.7);
+  border-radius: 4px;
+  }
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(217.2, 91.2%, 59.8%, 1);
+  }

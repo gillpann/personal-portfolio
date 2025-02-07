@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
                 <h4 className="text-xl font-bold mb-3">{project.name}</h4>
                 
                 {/* Tech Stack with Icons */}
-                <div className="flex flex-wrap gap-3 mb-4">
+                <div className="grid grid-cols-3 gap-3 mb-4 sm:flex sm:flex-wrap">
                     {project.techStack?.map((tech, index) => (
                         <div key={index} className="flex items-center gap-1">
                             <Image 
@@ -64,7 +64,7 @@ const ProjectCard = ({ project }) => {
                 </p>
 
                 {/* Action Buttons */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                     <Dialog>
                         <DialogTrigger asChild>
                             <Button size="sm" variant="outline" className="gap-2 bg-primary hover:bg-primary/90 text-white dark:text-black">
@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
                                 Details
                             </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-2xl bg-background/90 backdrop-blur-lg">
+                        <DialogContent className="max-w-2xl bg-background/90 backdrop-blur-lg max-h-[100vh] overflow-y-auto custom-scrollbar">
                             <DialogHeader>
                                 <div className="flex justify-between items-center">
                                     <DialogTitle className="text-2xl font-bold">
