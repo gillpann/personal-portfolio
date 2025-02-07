@@ -27,6 +27,8 @@ const Socials = ({ containerStyles, iconsStyles }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={iconsStyles}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
             >
             {icon.name}
             </a>
