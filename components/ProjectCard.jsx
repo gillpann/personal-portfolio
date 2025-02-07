@@ -42,17 +42,17 @@ const ProjectCard = ({ project }) => {
                 <h4 className="text-xl font-bold mb-3">{project.name}</h4>
                 
                 {/* Tech Stack with Icons */}
-                <div className="grid grid-cols-3 gap-3 mb-4 sm:flex sm:flex-wrap">
+                <div className="flex flex-row flex-wrap gap-2 mb-4 overflow-x-auto">
                     {project.techStack?.map((tech, index) => (
-                        <div key={index} className="flex items-center gap-1">
+                        <div key={index} className="flex items-center gap-1 whitespace-nowrap">
                             <Image 
                                 src={`/tech/${tech.icon}`}
                                 width={20}
                                 height={20}
                                 alt={tech.name}
-                                className="w-5 h-5"
+                                className="w-4 h-4 sm:w-5 sm:h-5"
                             />
-                            <span className="text-sm text-muted-foreground">
+                            <span className="text-xs sm:text-sm text-muted-foreground">
                                 {tech.name}
                             </span>
                         </div>
@@ -64,12 +64,12 @@ const ProjectCard = ({ project }) => {
                 </p>
 
                 {/* Action Buttons */}
-                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                <div className="flex flex-row items-center gap-2">
                     <Dialog>
                         <DialogTrigger asChild>
-                            <Button size="sm" variant="outline" className="gap-2 bg-primary hover:bg-primary/90 text-white dark:text-black">
-                                <Info className="h-4 w-4" />
-                                Details
+                            <Button size="sm" variant="outline" className="gap-1 bg-primary hover:bg-primary/90 text-white dark:text-black">
+                                <Info className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <span className="text-xs sm:text-sm">Details</span>
                             </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-2xl bg-background/90 backdrop-blur-lg max-h-[100vh] overflow-y-auto custom-scrollbar">
@@ -135,13 +135,13 @@ const ProjectCard = ({ project }) => {
                     >
                         {hasLink ? (
                             <Link href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                <ExternalLink className="h-4 w-4" />
-                                Preview
+                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <span className="text-xs sm:text-sm">Preview</span>
                             </Link>
                         ) : (
                             <span className="flex items-center gap-2">
-                                <ExternalLink className="h-4 w-4" />
-                                Preview
+                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <span className="text-xs sm:text-sm">Preview</span>
                             </span>
                         )}
                     </Button>
@@ -158,11 +158,11 @@ const ProjectCard = ({ project }) => {
                     >
                         {hasGithub ? (
                             <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                                <Github className="h-4 w-4" />
+                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                             </Link>
                         ) : (
                             <span>
-                                <Github className="h-4 w-4" />
+                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                             </span>
                         )}
                     </Button>
