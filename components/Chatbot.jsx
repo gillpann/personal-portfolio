@@ -119,11 +119,11 @@ const ChatBot = () => {
             {/* Chat Icon */}
             <button
             onClick={handleToggleChat}
-            className="fixed left-4 md:left-8 bottom-6 z-40 bg-primary text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300"
+            className="fixed left-4 md:left-8 bottom-6 z-40 bg-primary text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 group"
             data-aos="fade-up"
             data-aos-delay="200"
             >
-            <Bot className="w-5 h-5 md:w-6 md:h-6" />
+            <Bot className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform duration-300" />
             </button>
 
             {/* Chat Window */}

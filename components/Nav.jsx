@@ -1,4 +1,5 @@
 "use client"
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -14,6 +15,29 @@ const links = [
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
     const path = usePathname();
+    const [activeSection, setActiveSection] = useState("");
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = links.map(link => ({
+                id: link.path.replace('/#', ''),
+                element: document.getElementById(link.path.replace('/#', ''))
+            }));
+
+            const currentSection = sections.find(section => {
+                if (!section.element) return false;
+                const rect = section.element.getBoundingClientRect();
+                return rect.top <= 100 && rect.bottom >= 100;
+            });
+
+            if (currentSection) {
+                setActiveSection(currentSection.id);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const handleClick = (e, path) => {
         e.preventDefault();
@@ -23,22 +47,24 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
         }
         if (onLinkClick) onLinkClick();
     };
+
     return (
-        <nav className={`${containerStyles}`}>
+        <nav className={`${containerStyles}`} >
             {links.map((link, index) => {
+                const isActive = activeSection === link.path.replace('/#', '');
                 return (
                     <Link
                         href={link.path}
                         key={index}
-                        className={`capitalize ${linkStyles} text-sm sm:text-base`}
+                        className={`capitalize ${linkStyles} text-sm sm:text-base relative`}
                         onClick={(e) => handleClick(e, link.path)}
+                        data-aos="zoom-in-up" data-aos-delay="200"
                     >
-                        {link.path === path && (
+                        {isActive && (
                             <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: 0 }}
-                                transition={{ type: "tween" }}
-                                layoutId="underLine"
+                                initial={{ scaleX: 0 }}
+                                animate={{ scaleX: 1 }}
+                                transition={{ duration: 0.3 }}
                                 className={`${underlineStyles}`}
                             />
                         )}

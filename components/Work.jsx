@@ -35,9 +35,11 @@ const Work = () => {
             data-aos-delay="400">
                 Here are some of my latest projects. Click below to explore more.
             </p>
-            <Link href="/projects" data-aos="zoom-in"
-                data-aos-delay="500">
-                <Button>All Project</Button>
+            <Link href="/projects" data-aos="zoom-in" data-aos-delay="500">
+                <Button className="group">
+                    All Project
+                    <span className="inline-block group-hover:translate-x-1 transition-transform duration-300"> →</span>
+                </Button>
             </Link>
             </div>
             {/* slider */}

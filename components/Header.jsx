@@ -36,10 +36,10 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Logo />
 
-                    {/* Mobile: Toggler di kiri, MobileNav di kanan */}
+                    {/* Mobile: Toggler di kiri saja jika bukan homepage */}
                     <div className="flex xl:hidden items-center gap-x-6">
-                        <ThemeToggler /> 
-                        <MobileNav />
+                        <ThemeToggler />
+                        {shouldShowNav && <MobileNav />}
                     </div>
 
                     {/* Desktop: Nav di tengah, ThemeToggler tetap di kanan */}

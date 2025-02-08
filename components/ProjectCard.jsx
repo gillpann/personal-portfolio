@@ -67,9 +67,9 @@ const ProjectCard = ({ project }) => {
                 <div className="flex flex-row items-center gap-2">
                     <Dialog>
                         <DialogTrigger asChild>
-                            <Button size="sm" variant="outline" className="gap-1 bg-primary hover:bg-primary/90 text-white dark:text-black">
-                                <Info className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <Button size="sm" variant="outline" className="group gap-1 bg-primary hover:bg-primary/90 text-white dark:text-black">
                                 <span className="text-xs sm:text-sm">Details</span>
+                                <Info className="h-3 w-3 sm:h-4 sm:w-4 group-hover:rotate-12 transition-transform duration-300" />
                             </Button>
                         </DialogTrigger>
                         <DialogContent className="z-[100] max-w-2xl bg-background/90 backdrop-blur-lg max-h-[100vh] overflow-y-auto custom-scrollbar">
@@ -114,9 +114,9 @@ const ProjectCard = ({ project }) => {
                             
                             <div className="flex justify-between items-center mt-6">
                                 <DialogClose asChild>
-                                    <Button variant="destructive" size="sm" className="gap-2">
+                                    <Button variant="destructive" size="sm" className="group gap-2">
                                         Close
-                                        <X className="h-4 w-4 items-center" />
+                                        <X className="h-4 w-4 items-center group-hover:rotate-90 transition-transform duration-300" />
                                     </Button>
                                 </DialogClose>
                             </div>
@@ -135,13 +135,13 @@ const ProjectCard = ({ project }) => {
                     >
                         {hasLink ? (
                             <Link href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span className="text-xs sm:text-sm">Preview</span>
+                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
                             </Link>
                         ) : (
                             <span className="flex items-center gap-2">
-                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
                                 <span className="text-xs sm:text-sm">Preview</span>
+                                <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
                             </span>
                         )}
                     </Button>
@@ -150,7 +150,7 @@ const ProjectCard = ({ project }) => {
                         size="sm"
                         variant="outline"
                         className={cn(
-                            "px-3",
+                            "group px-3",
                             !hasGithub && "opacity-50 cursor-not-allowed" 
                         )}
                         asChild={hasGithub}
@@ -158,7 +158,7 @@ const ProjectCard = ({ project }) => {
                     >
                         {hasGithub ? (
                             <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                                <Github className="h-3 w-3 sm:h-4 sm:w-4" />
+                                <Github className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-transform duration-300" />
                             </Link>
                         ) : (
                             <span>

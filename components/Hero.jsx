@@ -71,16 +71,18 @@ const Hero = () => {
                                 data-aos="zoom-in"
                                 data-aos-delay="1000"
                             >
-                                <Button className="gap-x-2 dark:text-white">
-                                    Contact me <Send size={18} />
+                                <Button className="group gap-x-2 dark:text-white">
+                                    Contact me 
+                                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                                 </Button>
                             </Link>
                             <div
                                 data-aos="zoom-in"
                                 data-aos-delay="1200"
                             >
-                                <Button variant="secondary" className="gap-x-2">
-                                    Download CV <Download size={18} />
+                                <Button variant="secondary" className="group gap-x-2">
+                                    Download CV 
+                                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
                                 </Button>
                             </div>
                         </div>
