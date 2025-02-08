@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
                                 <span className="text-xs sm:text-sm">Details</span>
                             </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-2xl bg-background/90 backdrop-blur-lg max-h-[100vh] overflow-y-auto custom-scrollbar">
+                        <DialogContent className="z-[100] max-w-2xl bg-background/90 backdrop-blur-lg max-h-[100vh] overflow-y-auto custom-scrollbar">
                             <DialogHeader>
                                 <div className="flex justify-between items-center">
                                     <DialogTitle className="text-2xl font-bold">

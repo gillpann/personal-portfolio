@@ -129,7 +129,7 @@ const ChatBot = () => {
             {/* Chat Window */}
             <div
             ref={chatContainerRef}
-            className={`fixed left-0 bottom-0 w-full md:w-[400px] h-[70vh] md:h-[600px] bg-background/95 backdrop-blur-lg border shadow-2xl z-50 transition-transform duration-300 ${
+            className={`fixed left-0 bottom-0 w-full md:w-[400px] h-[70vh] md:h-[600px] bg-background/95 backdrop-blur-lg border shadow-2xl z-[100] transition-transform duration-300 ${
                 isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
             >

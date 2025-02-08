@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import ProjectCard from "@/components/ProjectCard"
+import BackButton from "@/components/BackButton";
 import { projectData } from "@/data/projects"
 
 // Remove duplicate categories
@@ -17,6 +18,7 @@ const Projects = () => {
 
     return (
         <section className='min-h-screen pt-12'>
+            <BackButton destination="/#work" label="Back to Work" />
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto" data-aos="fade-down">My Projects</h2>
                 {/* Tabs */}

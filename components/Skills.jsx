@@ -39,7 +39,7 @@ const SkillItem = ({ name, level, icon, description }) => {
 
 const Skills = () => {
   return (
-    <section className="py-12 xl:py-24 mb-12 xl:mb-24">
+    <section id="skills" className="py-12 xl:py-24 mb-12 xl:mb-24">
       <div className="container mx-auto">
         {/* Mobile Layout: Skills Title on Top */}
         <h2

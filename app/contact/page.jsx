@@ -1,69 +1,71 @@
 // components
 import Form from "@/components/Form"
+import BackButton from "@/components/BackButton";
 
     const Contact = () => {
     return (
-        <section>
-        <div className="container mx-auto">
-            {/* text & illustration */}
-            <div className="grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24">
-            {/* text */}
-            <div className="flex flex-col justify-center">
-                <div
-                className="flex items-center gap-x-4 text-primary text-lg mb-4"
-                data-aos="fade-down" data-aos-delay="200"
-                >
-                <span className="w-[30px] h-[2px] bg-primary"></span>
-                Say Hello 👋
+            <section>
+                <BackButton destination="/#cta" label="Back to Home" />
+                <div className="container mx-auto">
+                    {/* text & illustration */}
+                    <div className="grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24">
+                    {/* text */}
+                    <div className="flex flex-col justify-center">
+                        <div
+                        className="flex items-center gap-x-4 text-primary text-lg mb-4"
+                        data-aos="fade-down" data-aos-delay="200"
+                        >
+                        <span className="w-[30px] h-[2px] bg-primary"></span>
+                        Say Hello 👋
+                        </div>
+                        <h1 className="h1 max-w-md mb-8" data-aos="fade-right" data-aos-delay="300">
+                        Let's Work Together.
+                        </h1>
+                        <p className="subtitle max-w-[400px]" data-aos="fade-up" data-aos-delay="400">
+                        If you have an exciting project or just want to say hi, I'm always
+                        open to new opportunities and connections.
+                        </p>
+                    </div>
+                    {/* illustration */}
+                    <div
+                        className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"
+                        data-aos="fade-left" data-aos-delay="500"
+                    ></div>
+                    </div>
+                    {/* text info & form */}
+                    <div className="grid xl:grid-cols-2 gap-x-8 mb-24 xl:mb-32">
+                    {/* text info */}
+                    <div
+                        className="flex flex-col gap-y-6 mb-12 xl:mb-24"
+                        data-aos="fade-up" data-aos-delay="200"
+                    >
+                        {/* email */}
+                        <InfoBox
+                        iconSrc="/contact/gmail.png"
+                        title="Let's stay connected:"
+                        content="gpundong@gmail.com"
+                        data-aos="fade-up" data-aos-delay="300"
+                        />
+                        {/* telepon */}
+                        <InfoBox
+                        iconSrc="/contact/whatsapp.png"
+                        title="Need to talk? I'm here to chat"
+                        content="+62 12345678"
+                        data-aos="fade-up" data-aos-delay="400"
+                        />
+                        {/* alamat */}
+                        <InfoBox
+                        iconSrc="/contact/home.png"
+                        title="Find me at:"
+                        content="Bekasi, Indonesia"
+                        data-aos="fade-up" data-aos-delay="500"
+                        />
+                    </div>
+                    <Form  />
+                    </div>
                 </div>
-                <h1 className="h1 max-w-md mb-8" data-aos="fade-right" data-aos-delay="300">
-                Let's Work Together.
-                </h1>
-                <p className="subtitle max-w-[400px]" data-aos="fade-up" data-aos-delay="400">
-                If you have an exciting project or just want to say hi, I'm always
-                open to new opportunities and connections.
-                </p>
-            </div>
-            {/* illustration */}
-            <div
-                className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"
-                data-aos="fade-left" data-aos-delay="500"
-            ></div>
-            </div>
-            {/* text info & form */}
-            <div className="grid xl:grid-cols-2 gap-x-8 mb-24 xl:mb-32">
-            {/* text info */}
-            <div
-                className="flex flex-col gap-y-6 mb-12 xl:mb-24"
-                data-aos="fade-up" data-aos-delay="200"
-            >
-                {/* email */}
-                <InfoBox
-                iconSrc="/contact/gmail.png"
-                title="Let's stay connected:"
-                content="gpundong@gmail.com"
-                data-aos="fade-up" data-aos-delay="300"
-                />
-                {/* telepon */}
-                <InfoBox
-                iconSrc="/contact/whatsapp.png"
-                title="Need to talk? I'm here to chat"
-                content="+62 12345678"
-                data-aos="fade-up" data-aos-delay="400"
-                />
-                {/* alamat */}
-                <InfoBox
-                iconSrc="/contact/home.png"
-                title="Find me at:"
-                content="Bekasi, Indonesia"
-                data-aos="fade-up" data-aos-delay="500"
-                />
-            </div>
-            <Form  />
-            </div>
-        </div>
-        </section>
-    );
+            </section>
+        );
     };
 
     const InfoBox = ({ iconSrc, title, content }) => {

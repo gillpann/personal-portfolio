@@ -12,7 +12,7 @@ const Footer = () => {
             />
             {/* copyright */}
             <div className="text-white text-sm md:text-base whitespace-nowrap">
-                &copy; 2024 Created by Ahmad Gilvan. All rights reserved.
+                &copy; {new Date().getFullYear()} Created by Ahmad Gilvan. All rights reserved.
             </div>
             </div>
         </div>

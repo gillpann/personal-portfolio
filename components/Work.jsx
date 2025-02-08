@@ -19,7 +19,7 @@ import { projectData } from "@/data/projects";
 
 const Work = () => {
     return (
-        <section className="relative mb-12 xl:mb-48">
+        <section id="work" className="relative mb-12 xl:mb-48">
         <div className="container mx-auto">
             {/* text */}
             <div

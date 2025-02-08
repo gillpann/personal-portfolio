@@ -19,7 +19,7 @@ const MobileNav = () => {
                 <AlignJustify className="cursor-pointer" />
             </SheetTrigger>
             <SheetContent>
-                <div className="flex flex-col items-center justify-between h-full py-8">
+                <div className="flex flex-col items-center justify-between h-full py-8 z-[100]">
                     <div className="flex flex-col items-center gap-y-32">
                         <Logo />
                         <Nav
