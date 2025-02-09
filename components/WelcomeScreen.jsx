@@ -1,66 +1,123 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import Socials from "@/components/Socials";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Globe } from "lucide-react";
+import Socials from "./Socials";
 
-const WelcomeScreen = () => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [fadeOut, setFadeOut] = useState(false);
+const TypewriterEffect = ({ text }) => {
+    const [displayText, setDisplayText] = useState("");
 
     useEffect(() => {
-        
-        const hasSeenWelcome = localStorage.getItem("welcomeScreenShown");
-
-        if (!hasSeenWelcome) {
-        setIsVisible(true); 
-
-        const fadeTimer = setTimeout(() => setFadeOut(true), 3500); 
-        const hideTimer = setTimeout(() => {
-            setIsVisible(false);
-            localStorage.setItem("welcomeScreenShown", "true"); 
-        }, 4500); 
-
-        return () => {
-            clearTimeout(fadeTimer);
-            clearTimeout(hideTimer);
-        };
+        let index = 0;
+        const timer = setInterval(() => {
+        if (index <= text.length) {
+            setDisplayText(text.slice(0, index));
+            index++;
+        } else {
+            clearInterval(timer);
         }
-    }, []);
+        }, 100);
 
-    if (!isVisible) return null;
+        return () => clearInterval(timer);
+    }, [text]);
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-white dark:bg-black transition-all duration-1000">
-        <div className="absolute inset-0 bg-white dark:bg-black z-10"></div>
-        <div
-            className={`text-center z-20 transition-all duration-1000 ${
-            fadeOut ? "opacity-0" : "opacity-100"
-            }`}
-        >
-            {/* Logo Sosial */}
-            <div className="mb-4" data-aos="fade-down">
-            <Socials
-                containerStyles="flex justify-center gap-6"
-                iconsStyles="text-3xl text-primary hover:text-secondary transition-colors"
-            />
-            </div>
+        <span className="inline-block">
+        {displayText}
+        <span className="animate-pulse">|</span>
+        </span>
+    );
+};
 
-            <div
-            className="text-sm uppercase font-semibold mb-4 tracking-[2px]"
-            data-aos="fade-down"
-            style={{ color: "var(--text-primary)" }}
-            >
-            Welcome to my
-            </div>
+const WelcomeScreen = ({ onLoadingComplete }) => {
+    const [isLoading, setIsLoading] = useState(true);
 
-            <h1
-            className="text-3xl uppercase sm:text-4xl md:text-6xl font-bold text-primary whitespace-nowrap"
-            data-aos="fade-up"
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        setIsLoading(false);
+        setTimeout(() => {
+            onLoadingComplete?.();
+        }, 1000);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [onLoadingComplete]);
+
+    return (
+        <AnimatePresence>
+        {isLoading && (
+            <motion.div
+            className="fixed inset-0 bg-background"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{
+                opacity: 0,
+                transition: {
+                duration: 0.8,
+                ease: "easeInOut",
+                },
+            }}
             >
-            Portfolio Website
-            </h1>
-        </div>
-        </div>
+            <div className="relative min-h-screen flex items-center justify-center px-4">
+                <div className="w-full max-w-4xl mx-auto">
+                {/* Socials */}
+                <motion.div
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="flex justify-center mb-12"
+                >
+                    <Socials
+                    containerStyles="flex gap-x-6"
+                    iconsStyles="text-2xl hover:text-primary transition-all"
+                    />
+                </motion.div>
+
+                {/* Welcome Text */}
+                <div className="text-center mb-12">
+                    <h1 className="text-3xl md:text-6xl font-bold space-y-4">
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 1 }}
+                        className="mb-4"
+                    >
+                        <span className="uppercase bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent  whitespace-nowrap">
+                        Welcome to my
+                        </span>
+                    </motion.div>
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 1.5 }}
+                    >
+                        <span className="uppercase bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent  whitespace-nowrap">
+                        Portfolio Website
+                        </span>
+                    </motion.div>
+                    </h1>
+                </div>
+
+                {/* Website Link */}
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 2 }}
+                    className="text-center"
+                >
+                    <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full">
+                    <Globe className="w-5 h-5 text-primary" />
+                    <span className="text-xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                        <TypewriterEffect text="ahmad-gilvan.vercel.app" />
+                    </span>
+                    </div>
+                </motion.div>
+                </div>
+            </div>
+            </motion.div>
+        )}
+        </AnimatePresence>
     );
 };
 
