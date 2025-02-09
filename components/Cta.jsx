@@ -4,7 +4,7 @@ import { Sparkles, MessageCircle } from "lucide-react";
 
 const Cta = () => {
     return (
-        <section id="cta" className="py-16 md:py-24 relative overflow-hidden">
+        <section id="cta" className="py-16 md:py-20 relative overflow-hidden">
             {/* Background with gradient overlay */}
             <div className="absolute inset-0 bg-tertiary dark:bg-secondary/40">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>

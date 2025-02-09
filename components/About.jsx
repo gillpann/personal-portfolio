@@ -74,7 +74,7 @@ const About = () => {
     // console.log(getData(qualificationData, "experience"));
 
     return (
-        <section id="about" className="py-12 xl:py-20">
+        <section id="about" className="py-10 xl:py-16">
         <div className="container mx-auto" data-aos="fade-up">
             <h2 className="section-title pt-4 mb-8 xl:mb-16 text-center mx-auto">
             About me

@@ -29,7 +29,7 @@ const servicesData = [
 
 const Services = () => {
     return (
-        <section id="services" className="mb-4 xl:mb-8">
+        <section id="services" className="mb-12 xl:mb-24">
         <div className="container mx-auto">
             <h2
             className="section-title mb-12 xl:mb-24 text-center mx-auto"

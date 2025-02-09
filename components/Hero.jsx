@@ -21,7 +21,7 @@ const Hero = () => {
     ];
 
     return (
-        <section id="hero" className="py-12 xl:py-20 min-h-screen xl:min-h-[84vh] xl:pt-16 mb-12 xl:mb-24">
+        <section id="hero" className="py-12 xl:py-20 min-h-screen xl:min-h-[90vh] xl:pt-16 mb-10 xl:mb-20">
             <div className="container max-w-screen-xl mx-auto px-4">
                 <div className="flex flex-col xl:flex-row xl:justify-between gap-y-8 xl:gap-x-8">
                     {/* text */}
