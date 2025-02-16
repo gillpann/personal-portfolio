@@ -71,18 +71,19 @@ const Hero = () => {
                                 data-aos="zoom-in"
                                 data-aos-delay="1000"
                             >
-                                <Button className="group gap-x-2 dark:text-white">
-                                    Contact me 
-                                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                <Button className="group gap-x-2 bg-primary hover:bg-primary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                                    <span className="flex items-center gap-2 text-sm md:text-base">
+                                        Contact Me
+                                        <Send className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                                    </span>
                                 </Button>
                             </Link>
-                            <div
-                                data-aos="zoom-in"
-                                data-aos-delay="1200"
-                            >
-                                <Button variant="secondary" className="group gap-x-2">
-                                    Download CV 
-                                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                            <div data-aos="zoom-in" data-aos-delay="1200">
+                                <Button className="group gap-x-2 bg-secondary hover:bg-secondary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                                    <span className="flex items-center gap-2 text-sm md:text-base">
+                                        Download CV
+                                        <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                                    </span>
                                 </Button>
                             </div>
                         </div>

@@ -49,7 +49,7 @@ const Cta = () => {
 
                     <div data-aos="fade-up" data-aos-delay="400">
                         <Link href="/contact" onClick={handleClick}>
-                            <Button className="group bg-primary hover:bg-primary/90 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                            <Button className="group bg-primary hover:bg-primary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
                                 <span className="flex items-center gap-2 text-sm md:text-base">
                                     Let's Discuss Your Project
                                     <MessageCircle className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />

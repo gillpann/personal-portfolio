@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useLoadingState } from "./LoadingStateProvider";
+import { ArrowRight} from "lucide-react"
 
 // swiper react 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,9 +40,11 @@ const Work = () => {
                         Here are some of my latest projects. Click below to explore more.
                     </p>
                     <Link href="/projects" onClick={handleClick} data-aos="zoom-in" data-aos-delay="500">
-                        <Button className="group">
-                            All Project
-                            <span className="inline-block group-hover:translate-x-1 transition-transform duration-300"> ?</span>
+                        <Button className="group bg-primary hover:bg-primary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                                <span className="flex items-center gap-2 text-sm md:text-base">
+                                    All Project
+                                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                                </span>
                         </Button>
                     </Link>
                 </div>

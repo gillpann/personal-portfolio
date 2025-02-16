@@ -16,12 +16,12 @@ const BackButton = ({ destination, label }) => {
             <Link href={destination} onClick={handleClick}>
                 <Button 
                     variant="outline" 
-                    className="gap-x-2 shadow-md 
-                    bg-background dark:bg-secondary hover:bg-accent 
-                    dark:hover:bg-secondary/80 transition-all duration-300"
+                    className="group gap-x-2 shadow-md px-6 py-3 rounded-full
+                        bg-background dark:bg-secondary hover:bg-accent 
+                        dark:hover:bg-secondary/80 transition-all duration-300"
                     data-aos="fade-right"
                 >
-                    <ArrowLeft size={16} />
+                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
                     {label}
                 </Button>
             </Link>
