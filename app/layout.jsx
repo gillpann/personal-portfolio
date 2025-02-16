@@ -12,6 +12,7 @@ import WelcomeScreen from "@/components/WelcomeScreen";
 
 // theme provider
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LoadingStateProvider } from "@/components/LoadingStateProvider";
 import AOSInitializer from "@/components/AOSInitializer";
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -34,18 +35,20 @@ export default function RootLayout({ children }) {
       </head>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <AOSInitializer />
-          {showWelcome ? (
-            <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
-          ) : (
-            <>
-              <Header />
-              {children}
-              <Footer />
-              <Chatbot />
-              <BackToTopButton />
-            </>
-          )}
+          <LoadingStateProvider>
+            <AOSInitializer />
+            {showWelcome ? (
+              <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
+            ) : (
+              <>
+                <Header />
+                {children}
+                <Footer />
+                <Chatbot />
+                <BackToTopButton />
+              </>
+            )}
+          </LoadingStateProvider>
         </ThemeProvider>
       </body>
     </html>

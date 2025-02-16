@@ -1,11 +1,19 @@
+"use client"
 import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { useLoadingState } from "./LoadingStateProvider";
 
 const BackButton = ({ destination, label }) => {
+    const { showLoading } = useLoadingState();
+
+    const handleClick = () => {
+        showLoading();
+    };
+
     return (
         <div className="container mx-auto mt-8 mb-12">
-            <Link href={destination}>
+            <Link href={destination} onClick={handleClick}>
                 <Button 
                     variant="outline" 
                     className="gap-x-2 shadow-md 
