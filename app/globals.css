@@ -164,3 +164,58 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: hsl(217.2, 91.2%, 59.8%, 1);
   }
+
+/* toast */
+@layer components {
+  /* Success Toast */
+  .toast-success {
+    @apply bg-green-100 dark:bg-green-900 border-green-500 text-green-800 dark:text-green-100;
+  }
+  
+  .toast-success .toast-title {
+    @apply text-green-800 dark:text-green-100 font-medium;
+  }
+  
+  .toast-success .toast-description {
+    @apply text-green-700 dark:text-green-200;
+  }
+  
+  /* Error Toast */
+  .toast-error {
+    @apply bg-red-100 dark:bg-red-900 border-red-500 text-red-800 dark:text-red-100;
+  }
+  
+  .toast-error .toast-title {
+    @apply text-red-800 dark:text-red-100 font-medium;
+  }
+  
+  .toast-error .toast-description {
+    @apply text-red-700 dark:text-red-200;
+  }
+  
+  /* Info Toast */
+  .toast-info {
+    @apply bg-blue-100 dark:bg-blue-900 border-blue-500 text-blue-800 dark:text-blue-100;
+  }
+  
+  .toast-info .toast-title {
+    @apply text-blue-800 dark:text-blue-100 font-medium;
+  }
+  
+  .toast-info .toast-description {
+    @apply text-blue-700 dark:text-blue-200;
+  }
+  
+  /* Warning Toast */
+  .toast-warning {
+    @apply bg-yellow-100 dark:bg-yellow-900 border-yellow-500 text-yellow-800 dark:text-yellow-100;
+  }
+  
+  .toast-warning .toast-title {
+    @apply text-yellow-800 dark:text-yellow-100 font-medium;
+  }
+  
+  .toast-warning .toast-description {
+    @apply text-yellow-700 dark:text-yellow-200;
+  }
+}

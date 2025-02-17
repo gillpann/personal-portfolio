@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import Chatbot from "@/components/Chatbot";
 import WelcomeScreen from "@/components/WelcomeScreen";
+import { Toaster } from "@/components/ui/toaster";
 
 // theme provider
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
                 <Footer />
                 <Chatbot />
                 <BackToTopButton />
+                <Toaster />
               </>
             )}
           </LoadingStateProvider>
