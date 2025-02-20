@@ -23,33 +23,32 @@ const ExperienceCard = ({ title, company, status, duration, description }) => {
   return (
     <figure
       className={cn(
-        "relative w-72 cursor-pointer overflow-hidden rounded-xl border p-4 flex flex-col gap-2",
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-        "hover:border-2 hover:border-primary"
+        "relative w-60 sm:w-72 cursor-pointer overflow-hidden rounded-xl border p-3 sm:p-4 flex flex-col gap-1 sm:gap-2",
+        "border-border bg-card hover:bg-accent hover:border-2 hover:border-primary"
       )}
     >
-      <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="text-primary font-semibold">
-        {company}{" "}
-        <span className="text-gray-600 dark:text-gray-400">| {status}</span>
+      <h3 className="text-lg sm:text-2xl font-bold text-foreground">{title}</h3>
+      <p className="text-primary font-semibold text-sm sm:text-base">
+        {company} <span className="text-muted-foreground">| {status}</span>
       </p>
-      <p className="text-sm text-gray-500 dark:text-gray-400">{duration}</p>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-xs sm:text-sm text-muted-foreground">{duration}</p>
+      <p className="text-xs sm:text-sm text-accent-foreground">{description}</p>
     </figure>
   );
 };
 
+
+
 export default function ExperienceMarquee() {
   return (
-    <div className="relative flex h-[250px] w-full items-center justify-center overflow-hidden rounded-lg bg-background">
-      <Marquee pauseOnHover className="[--duration:20s]">
+    <div className="relative flex h-[180px] sm:h-[250px] w-full items-center justify-center overflow-hidden rounded-lg bg-background">
+      <Marquee pauseOnHover className="sm:[--duration:20s] [--duration:15s]">
         {experiences.map((exp, index) => (
           <ExperienceCard key={index} {...exp} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background dark:from-background"></div>
     </div>
   );
-}
+};
