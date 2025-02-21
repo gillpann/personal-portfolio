@@ -4,7 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
-import Cta from "@/components/Cta";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Skills />
         <Services />
         <Work />
-        <Cta />
+        <Contact />
       </main>
     </>
   );

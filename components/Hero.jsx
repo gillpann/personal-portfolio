@@ -66,10 +66,11 @@ const Hero = () => {
                         </p>
                         {/* buttons with staggered animation */}
                         <div className="flex flex-col md:flex-row gap-y-3 md:gap-x-3 mx-auto xl:mx-0 mb-12">
-                            <Link 
-                                href="/contact"
-                                data-aos="zoom-in"
+                            <a 
+                                href="#contact" 
+                                data-aos="zoom-in" 
                                 data-aos-delay="1000"
+                                className="inline-block" 
                             >
                                 <Button className="group gap-x-2 bg-primary hover:bg-primary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
                                     <span className="flex items-center gap-2 text-sm md:text-base">
@@ -77,7 +78,7 @@ const Hero = () => {
                                         <Send className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </Button>
-                            </Link>
+                            </a>
                             <div data-aos="zoom-in" data-aos-delay="1200">
                                 <Button className="group gap-x-2 bg-secondary hover:bg-secondary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
                                     <span className="flex items-center gap-2 text-sm md:text-base">

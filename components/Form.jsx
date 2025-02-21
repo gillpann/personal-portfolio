@@ -68,55 +68,75 @@ const Form = () => {
 
     return (
         <form
-            className="flex flex-col gap-y-4"
+            className="flex flex-col gap-y-6"
             onSubmit={handleSubmit}
-            data-aos="fade-up" data-aos-delay="200"
+            data-aos="fade-up"
+            data-aos-delay="200"
         >
-            {/* Input for Name */}
-            <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="300">
-                <Input
-                    type="text"
-                    id="name"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                />
-                <User className="absolute right-6" size={20} />
-            </div>
+            <div className="space-y-4">
+                {/* Input for Name */}
+                <div 
+                    className="relative group" 
+                    data-aos="fade-up" 
+                    data-aos-delay="300"
+                >
+                    <Input
+                        type="text"
+                        id="name"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="bg-background/50 border-muted-foreground/20 h-12 px-6 transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary hover:border-primary/50 rounded-xl"
+                    />
+                    <User className="absolute right-6 top-1/2 -translate-y-1/2 text-muted-foreground/50 group-hover:text-primary/70 transition-colors duration-300" size={18} />
+                </div>
 
-            {/* Input for Email */}
-            <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="400">
-                <Input
-                    type="email"
-                    id="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
-                <MailIcon className="absolute right-6" size={20} />
-            </div>
+                {/* Input for Email */}
+                <div 
+                    className="relative group" 
+                    data-aos="fade-up" 
+                    data-aos-delay="400"
+                >
+                    <Input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="bg-background/50 border-muted-foreground/20 h-12 px-6 transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary hover:border-primary/50 rounded-xl"
+                    />
+                    <MailIcon className="absolute right-6 top-1/2 -translate-y-1/2 text-muted-foreground/50 group-hover:text-primary/70 transition-colors duration-300" size={18} />
+                </div>
 
-            {/* Textarea for Message */}
-            <div className="relative flex items-center" data-aos="fade-up" data-aos-delay="500">
-                <Textarea
-                    id="message"
-                    placeholder="Type Your Message Here."
-                    value={formData.message}
-                    onChange={handleChange}
-                />
-                <MessageSquare className="absolute top-4 right-6" size={20} />
+                {/* Textarea for Message */}
+                <div 
+                    className="relative group" 
+                    data-aos="fade-up" 
+                    data-aos-delay="500"
+                >
+                    <Textarea
+                        id="message"
+                        placeholder="Type Your Message Here."
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="bg-background/50 border-muted-foreground/20 min-h-[180px] px-6 py-4 transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary hover:border-primary/50 resize-none rounded-xl"
+                    />
+                    <MessageSquare className="absolute right-6 top-6 text-muted-foreground/50 group-hover:text-primary/70 transition-colors duration-300" size={18} />
+                </div>
             </div>
 
             {/* Submit Button */}
             <Button
-                className="flex items-center gap-x-1 max-w-[166px]"
+                className="flex items-center gap-x-2 bg-primary hover:bg-primary/90 text-white px-8 py-6 h-12 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/20"
                 type="submit"
                 disabled={isSubmitting}
                 data-aos="zoom-in"
-                data-aos-delay="500"
+                data-aos-delay="600"
             >
-                {isSubmitting ? "Sending..." : "Let's Talk"}
-                <ArrowRightIcon size={20} />
+                <span className="text-sm font-medium">
+                    {isSubmitting ? "Sending..." : "Let's Talk"}
+                </span>
+                <ArrowRightIcon size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
         </form>
     );

@@ -10,7 +10,7 @@ const links = [
     { path: "/#skills", name: "skills" },
     { path: "/#services", name: "services" },
     { path: "/#work", name: "projects" },
-    { path: "/#cta", name: "contact" }
+    { path: "/#contact", name: "contact" }
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
