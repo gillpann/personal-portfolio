@@ -25,18 +25,18 @@ This is my personal portfolio website built with **Next.js, React, and Tailwind 
 
 ## 🚀 Getting Started
 
-### 1️⃣ Clone the repository:
+### 1️⃣  Clone the repository:
 ```bash
 git clone https://github.com/gillpann/personal-portfolio.git
 cd personal-portfolio
 ```
 
-### 2️⃣ Install dependencies:
+### 2️⃣  Install dependencies:
 ```bash
 npm install  # or yarn install or pnpm install
 ```
 
-### 3️⃣ Run the development server:
+### 3️⃣  Run the development server:
 ```bash
 npm run dev  # or yarn dev or pnpm dev
 ```
