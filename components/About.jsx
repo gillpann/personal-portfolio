@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Mail, Home, User } from "lucide-react";
+import { Briefcase, GraduationCap, Mail, Home, User, Code, Star } from "lucide-react";
 import MarqueeDemo from "@/components/MarqueeDemo";
 
 const infoData = {
@@ -28,107 +28,101 @@ const About = () => {
           About me
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 gap-8">
-          {/* Left Column - Personal Info */}
-          <div data-aos="fade-right">
-            <div className="bg-card rounded-xl p-6 sm:p-8 shadow-lg border border-border h-full">
-              <h3
-                className="text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-primary whitespace-nowrap text-center sm:text-left"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                The Person Behind the Code
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Personal Info Card */}
+          <div
+            className="group bg-card rounded-xl p-6 shadow-lg border border-border h-full relative overflow-hidden transition-all duration-300 hover:shadow-xl"
+            data-aos="fade-right"
+          >
+            {/* Subtle gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-primary flex items-center whitespace-nowrap gap-2 relative">
+              <Code className="w-6 h-6" />
+              The Person Behind the Code
+              <Star className="w-2 h-2 sm:w-4 sm:h-4 absolute -top-1 -right-2 text-primary transition-all duration-500 group-hover:rotate-45 group-hover:scale-110" />
+            </h3>
+            <p className="text-muted-foreground text-center sm:text-left mb-6 leading-relaxed relative">
+              Hello everyone👋! I'm a passionate and curious developer who loves
+              solving problems through code. As an intermediate-level developer,
+              I'm always eager to explore new technologies and refine my skills.
+              I thrive in both solo and collaborative environments, constantly
+              striving to deliver high-quality results. Beyond coding, I enjoy
+              learning about system design, optimizing performance, and staying
+              up-to-date with the latest trends in tech.
+            </p>
+            <div className="space-y-3 relative ">
+              {[
+                { icon: User, text: infoData.name },
+                { icon: Mail, text: infoData.email },
+                { icon: Home, text: infoData.location },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center sm:justify-start text-center sm:text-left gap-x-3 text-base group/item hover:text-primary transition-colors duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay={200 + index * 100}
+                >
+                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover/item:scale-110" />
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Education Card */}
+          <div
+            className="group bg-card rounded-xl p-6 shadow-lg border border-border h-full relative overflow-hidden"
+            data-aos="fade-left"
+          >
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="flex items-center gap-2 mb-6 relative">
+              <GraduationCap className="text-primary w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="text-xl font-bold text-primary">
+                Education Journey
               </h3>
-              <div className="space-y-3 sm:space-y-4 text-muted-foreground mb-6 sm:mb-8">
-                <p
-                  className="text-sm sm:text-lg text-center sm:text-left leading-relaxed"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  Hello everyone👋! I'm a passionate and curious developer who
-                  loves solving problems through code. As an intermediate-level
-                  developer, I'm always eager to explore new technologies and
-                  refine my skills. I thrive in both solo and collaborative
-                  environments, constantly striving to deliver high-quality
-                  results. Beyond coding, I enjoy learning about system design,
-                  optimizing performance, and staying up-to-date with the latest
-                  trends in tech.
-                </p>
-              </div>
-              <div className="space-y-3 sm:space-y-4">
-                <div
-                  className="flex items-center gap-x-2 sm:gap-x-3 text-sm sm:text-base justify-center sm:justify-start"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <User className="text-primary w-5 sm:w-6 h-5 sm:h-6" />
-                  <span>{infoData.name}</span>
-                </div>
-                <div
-                  className="flex items-center gap-x-2 sm:gap-x-3 text-sm sm:text-base justify-center sm:justify-start"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <Mail className="text-primary w-5 sm:w-6 h-5 sm:h-6" />
-                  <span>{infoData.email}</span>
-                </div>
-                <div
-                  className="flex items-center gap-x-2 sm:gap-x-3 text-sm sm:text-base justify-center sm:justify-start"
-                  data-aos="fade-up"
-                  data-aos-delay="600"
-                >
-                  <Home className="text-primary w-5 sm:w-6 h-5 sm:h-6" />
-                  <span>{infoData.location}</span>
-                </div>
-              </div>
             </div>
-          </div>
-
-          {/* Right Column - Education */}
-          <div data-aos="fade-up">
-            <div className="bg-card rounded-xl p-4 sm:p-6 shadow-lg border border-border">
-              <div className="flex items-center gap-x-2 md:gap-x-3 text-center sm:text-left mb-6 sm:mb-8">
-                <GraduationCap size={24} className="text-primary" />
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary">
-                  Education Journey
-                </h3>
-              </div>
-              <div className="space-y-6">
-                {educationData.map((item, index) => (
-                  <div
-                    className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 group"
-                    key={index}
-                    data-aos="fade-up"
-                    data-aos-delay={700 + index * 100}
-                  >
-                    <div className="h-[70px] sm:h-[84px] w-[1px] bg-border relative ml-2">
-                      <div className="w-[7px] sm:w-[9px] h-[7px] sm:h-[9px] rounded-full bg-primary absolute -left-[3px] sm:-left-[4px] group-hover:translate-y-[70px] sm:group-hover:translate-y-[84px] transition-all duration-500"></div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-lg sm:text-xl leading-none mb-1 sm:mb-2">
-                        {item.university}
-                      </div>
-                      <div className="text-base sm:text-lg leading-none text-muted-foreground mb-2 sm:mb-4">
-                        {item.qualification}
-                      </div>
-                      <div className="text-sm sm:text-base font-medium">
-                        {item.years}
-                      </div>
-                    </div>
+            <div className="space-y-6">
+              {educationData.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative pl-6 pb-6 last:pb-0 group/item"
+                  data-aos="fade-up"
+                  data-aos-delay={300 + index * 100}
+                >
+                  {/* Timeline line with animation */}
+                  <div className="absolute left-0 top-2 bottom-0 w-[2px] bg-border overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-primary/50 transform -translate-y-full group-hover/item:translate-y-0 transition-transform duration-500" />
                   </div>
-                ))}
-              </div>
+                  {/* Timeline dot with pulse effect */}
+                  <div className="absolute left-[-4px] top-2 w-[10px] h-[10px] rounded-full bg-primary">
+                    <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
+                  </div>
+
+                  <div className="space-y-1 transform transition-transform duration-300 group-hover/item:translate-x-1">
+                    <h4 className="font-semibold text-lg">{item.university}</h4>
+                    <p className="text-muted-foreground">
+                      {item.qualification}
+                    </p>
+                    <p className="text-sm font-medium text-primary">
+                      {item.years}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Experience Section with Marquee */}
-        <div className="mt-8 sm:mt-12" data-aos="fade-up">
-          <div className="flex items-center gap-x-4 text-xl sm:text-2xl text-primary mb-6">
-            <Briefcase size={28} />
-            <h3 className="font-bold">Experience</h3>
+          {/* Experience Section */}
+          <div className="md:col-span-2 mt-6" data-aos="fade-up">
+            <div className="flex items-center gap-x-4 text-xl text-primary mb-6 group">
+              <Briefcase className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" />
+              <h3 className="font-bold">Experience</h3>
+            </div>
+            <MarqueeDemo />
           </div>
-          <MarqueeDemo />
         </div>
       </div>
     </section>
