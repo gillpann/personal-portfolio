@@ -4,7 +4,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 
 // components
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import Chatbot from "@/components/Chatbot";
@@ -12,9 +12,9 @@ import WelcomeScreen from "@/components/WelcomeScreen";
 import { Toaster } from "@/components/ui/toaster";
 
 // theme provider
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { LoadingStateProvider } from "@/components/LoadingStateProvider";
-import AOSInitializer from "@/components/AOSInitializer";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { LoadingStateProvider } from "@/components/ui/LoadingStateProvider";
+import AOSInitializer from "@/components/ui/AOSInitializer";
 
 const outfit = Outfit({ subsets: ["latin"] });
 

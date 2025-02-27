@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "../ui/use-toast";
 
 const Form = () => {
     const { toast } = useToast();

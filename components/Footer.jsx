@@ -1,23 +1,24 @@
-import Socials from "./Socials";
+import Socials from "./hero/Socials";
 
 const Footer = () => {
-    return (
-        <footer className="bg-secondary py-6 md:py-12">
-        <div className="container mx-auto">
-            <div className="flex flex-col items-center justify-between">
-            {/* socials */}
-            <Socials
-                containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4"
-                iconsStyles="text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
-            />
-            {/* copyright */}
-            <div className="text-white text-sm md:text-base whitespace-nowrap">
-                &copy; {new Date().getFullYear()} Created by Ahmad Gilvan. All rights reserved.
-            </div>
-            </div>
+  return (
+    <footer className="bg-secondary py-6 md:py-12">
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center justify-between">
+          {/* socials */}
+          <Socials
+            containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4"
+            iconsStyles="text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
+          />
+          {/* copyright */}
+          <div className="text-white text-sm md:text-base whitespace-nowrap">
+            &copy; {new Date().getFullYear()} Created by Ahmad Gilvan. All
+            rights reserved.
+          </div>
         </div>
-        </footer>
-    );
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

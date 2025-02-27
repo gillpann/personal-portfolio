@@ -1,5 +1,13 @@
-import { Briefcase, GraduationCap, Mail, Home, User, Code, Star } from "lucide-react";
-import MarqueeDemo from "@/components/MarqueeDemo";
+import {
+  Briefcase,
+  GraduationCap,
+  Mail,
+  Home,
+  User,
+  Code,
+  Star,
+} from "lucide-react";
+import MarqueeDemo from "@/components/about/MarqueeDemo";
 
 const infoData = {
   name: "Satria Ahmad Gilvan Pundong",

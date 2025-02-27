@@ -1,10 +1,9 @@
 // components
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Services from "@/components/Services";
-import Work from "@/components/Work";
-import Contact from "@/components/Contact";
+import Hero from "@/components/hero/Hero";
+import About from "@/components/about/About";
+import Skills from "@/components/skills/Skills";
+import Work from "@/components/project/Work";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <Services />
         <Work />
         <Contact />
       </main>
