@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useLoadingState } from "../ui/LoadingStateProvider";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 // swiper react
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +24,7 @@ const Work = () => {
   };
 
   return (
-    <section id="work" className="relative mb-12 xl:mb-32">
+    <section id="work" className="relative mb-12 xl:mb-40">
       <div className="container mx-auto">
         {/* text */}
         <div
@@ -83,6 +83,11 @@ const Work = () => {
               );
             })}
           </Swiper>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <ChevronLeft size={20} className="text-primary" />
+              <span>Swipe to explore</span>
+              <ChevronRight size={20} className="text-primary" />
+            </div>
         </div>
       </div>
     </section>

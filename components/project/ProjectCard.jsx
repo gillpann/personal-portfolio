@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
   const hasGithub = project.github && project.github !== "/";
 
   return (
-    <Card className="group overflow-hidden relative">
+    <Card className="group overflow-hidden relative border border-transparent hover:border-primary transition">
       <Badge className="absolute top-4 left-4 z-10 uppercase text-sm font-medium">
         {project.category}
       </Badge>
