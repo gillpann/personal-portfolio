@@ -1,136 +1,205 @@
+"use client";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ExperienceMarquee from "@/components/about/ExperienceMarquee";
 import {
-  Briefcase,
+  User2,
+  MailIcon,
+  HomeIcon,
   GraduationCap,
-  Mail,
-  Home,
-  User,
-  Code,
-  Star,
+  Briefcase,
 } from "lucide-react";
-import MarqueeDemo from "@/components/about/MarqueeDemo";
+import Lanyard from "@/components/Lanyard";
 
-const infoData = {
-  name: "Satria Ahmad Gilvan Pundong",
-  email: "gpundong@gmail.com",
-  location: "Bekasi, Indonesia",
-};
-
-const educationData = [
+const infoData = [
   {
-    university: "Gunadarma University",
-    qualification: "Bachelor of Informatics Engineering",
-    years: "2023 - present",
+    icon: <User2 size={20} />,
+    text: "Satria Ahmad Gilvan Pundong",
   },
   {
-    university: "SMAN 3 Tambun Selatan",
-    qualification: "Science Major",
-    years: "2020 - 2023",
+    icon: <MailIcon size={20} />,
+    text: "gpundong@gmail.com",
+  },
+  {
+    icon: <HomeIcon size={20} />,
+    text: "Bekasi, Indonesia",
+  },
+];
+
+const qualificationData = [
+  {
+    title: "education",
+    data: [
+      {
+        university: "Gunadarma University",
+        qualification: "Bachelor of Informatics Engineering",
+        years: "2023 - present",
+      },
+      {
+        university: "SMAN 3 Tambun Selatan",
+        qualification: "Science Major",
+        years: "2020 - 2023",
+      },
+    ],
   },
 ];
 
 const About = () => {
+  const getData = (arr, title) => {
+    return arr.find((item) => item.title === title);
+  };
+
   return (
-    <section id="about" className="py-10 xl:py-16">
+    <section id="about" className="py-6 xl:py-16">
       <div className="container mx-auto" data-aos="fade-up">
         <h2 className="section-title pt-4 mb-8 xl:mb-16 text-center mx-auto">
           About me
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Personal Info Card */}
-          <div
-            className="group bg-card rounded-xl p-6 shadow-lg border border-border h-full relative overflow-hidden transition-all duration-300 hover:shadow-xl"
-            data-aos="fade-right"
-          >
-            {/* Subtle gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-primary flex items-center whitespace-nowrap gap-2 relative">
-              <Code className="w-6 h-6" />
-              The Person Behind the Code
-              <Star className="w-2 h-2 sm:w-4 sm:h-4 absolute -top-1 -right-2 text-primary transition-all duration-500 group-hover:rotate-45 group-hover:scale-110" />
-            </h3>
-            <p className="text-muted-foreground text-center sm:text-left mb-6 leading-relaxed relative">
-              Hello everyone👋! I'm a passionate and curious developer who loves
-              solving problems through code. As an intermediate-level developer,
-              I'm always eager to explore new technologies and refine my skills.
-              I thrive in both solo and collaborative environments, constantly
-              striving to deliver high-quality results. Beyond coding, I enjoy
-              learning about system design, optimizing performance, and staying
-              up-to-date with the latest trends in tech.
-            </p>
-            <div className="space-y-3 relative ">
-              {[
-                { icon: User, text: infoData.name },
-                { icon: Mail, text: infoData.email },
-                { icon: Home, text: infoData.location },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center sm:justify-start text-center sm:text-left gap-x-3 text-base group/item hover:text-primary transition-colors duration-300"
-                  data-aos="fade-up"
-                  data-aos-delay={200 + index * 100}
-                >
-                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover/item:scale-110" />
-                  <span>{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Education Card */}
-          <div
-            className="group bg-card rounded-xl p-6 shadow-lg border border-border h-full relative overflow-hidden"
-            data-aos="fade-left"
-          >
-            {/* Subtle gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            <div className="flex items-center gap-2 mb-6 relative">
-              <GraduationCap className="text-primary w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-bold text-primary">
-                Education Journey
-              </h3>
-            </div>
-            <div className="space-y-6">
-              {educationData.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative pl-6 pb-6 last:pb-0 group/item"
-                  data-aos="fade-up"
-                  data-aos-delay={300 + index * 100}
-                >
-                  {/* Timeline line with animation */}
-                  <div className="absolute left-0 top-2 bottom-0 w-[2px] bg-border overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-full bg-primary/50 transform -translate-y-full group-hover/item:translate-y-0 transition-transform duration-500" />
-                  </div>
-                  {/* Timeline dot with pulse effect */}
-                  <div className="absolute left-[-4px] top-2 w-[10px] h-[10px] rounded-full bg-primary">
-                    <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
-                  </div>
-
-                  <div className="space-y-1 transform transition-transform duration-300 group-hover/item:translate-x-1">
-                    <h4 className="font-semibold text-lg">{item.university}</h4>
-                    <p className="text-muted-foreground">
-                      {item.qualification}
-                    </p>
-                    <p className="text-sm font-medium text-primary">
-                      {item.years}
-                    </p>
+      </div>
+      <div
+        className="flex flex-col xl:flex-row"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        {/* Lanyard */}
+        <div className="hidden xl:flex flex-1 relative justify-center">
+          <Lanyard
+            position={[0, 0, 20]}
+            gravity={[0, -40, 0]}
+            className="w-[400px] h-[400px]"
+          />
+        </div>
+        {/* tabs */}
+        <div className="flex-1">
+          <Tabs defaultValue="personal">
+            <TabsList
+              className="w-full grid xl:grid-cols-2 xl:max-w-[520px] xl:border dark:border-none"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                Personal Info
+              </TabsTrigger>
+              <TabsTrigger
+                className="w-[162px] xl:w-auto"
+                value="qualifications"
+              >
+                Education
+              </TabsTrigger>
+            </TabsList>
+            {/* tabs content */}
+            <div className="text-lg ml-4 mt-12 xl:mt-8">
+              {/* personal */}
+              <TabsContent value="personal" data-aos="fade-up">
+                <div className="text-center xl:text-left">
+                  <h3
+                    className="h3 mb-4"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    The Person Behind the Code
+                  </h3>
+                  <p
+                    className="subtitle max-w-xl mx-auto xl:mx-0 px-5 xl:px-0"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                  >
+                    Hello everyone??! I'm a passionate and curious developer who
+                    loves solving problems through code. As an
+                    intermediate-level developer, I'm always eager to explore
+                    new technologies and refine my skills. I thrive in both solo
+                    and collaborative environments, constantly striving to
+                    deliver high-quality results. Beyond coding, I enjoy
+                    learning about system design, optimizing performance, and
+                    staying up-to-date with the latest trends in tech.
+                  </p>
+                  {/* icons */}
+                  <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                    {infoData.map((item, index) => {
+                      return (
+                        <div
+                          className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                          key={index}
+                          data-aos="fade-up"
+                          data-aos-delay={600 + index * 100}
+                        >
+                          <div className="text-primary">{item.icon}</div>
+                          <div>{item.text}</div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </TabsContent>
 
-          {/* Experience Section */}
-          <div className="md:col-span-2 mt-6" data-aos="fade-up">
-            <div className="flex items-center gap-x-4 text-xl text-primary mb-6 group">
-              <Briefcase className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" />
-              <h3 className="font-bold">Experience</h3>
+              {/* Education */}
+              <TabsContent
+                value="qualifications"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div>
+                  <div
+                    className="flex items-center gap-x-4 text-[22px] text-primary mb-8"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <GraduationCap size={28} />
+                    <h3 className="capitalize font-medium">Education</h3>
+                  </div>
+                  {/* education */}
+                  <div className="flex flex-col gap-y-8">
+                    {getData(qualificationData, "education").data.map(
+                      (item, index) => {
+                        const { university, qualification, years } = item;
+                        return (
+                          <div
+                            className="flex gap-x-8 group"
+                            key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={500 + index * 200}
+                          >
+                            <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                              <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                            </div>
+                            <div>
+                              <div className="font-semibold text-xl leading-none mb-2">
+                                {university}
+                              </div>
+                              <div className="text-lg leading-none text-muted-foreground mb-4">
+                                {qualification}
+                              </div>
+                              <div className="text-base font-medium">
+                                {years}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+                </div>
+              </TabsContent>
             </div>
-            <MarqueeDemo />
-          </div>
+          </Tabs>
+        </div>
+      </div>
+
+      {/* Experience Marquee */}
+      <div
+        className="container mx-auto mt-8 xl:mt-12"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div
+          className="flex items-center gap-x-4 text-[22px] text-primary mb-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <Briefcase size={28} />
+          <h3 className="capitalize font-medium">Experience</h3>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500">
+          <ExperienceMarquee />
         </div>
       </div>
     </section>
