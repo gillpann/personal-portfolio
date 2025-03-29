@@ -8,7 +8,7 @@ import {
   GraduationCap,
   Briefcase,
 } from "lucide-react";
-import Lanyard from "@/components/Lanyard";
+import Lanyard from "@/components/about/Lanyard";
 
 const infoData = [
   {
@@ -63,9 +63,9 @@ const About = () => {
         {/* Lanyard */}
         <div className="hidden xl:flex flex-1 relative justify-center">
           <Lanyard
-            position={[0, 0, 20]}
+            position={[0, 0, 15]}
             gravity={[0, -40, 0]}
-            className="w-[400px] h-[400px]"
+            fov={[20]}
           />
         </div>
         {/* tabs */}
