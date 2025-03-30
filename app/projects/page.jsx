@@ -9,6 +9,7 @@ import { projectData } from "@/data/projects";
 const uniqueCategories = [
   "all projects",
   ...new Set(projectData.map((item) => item.category)),
+  "mobile app"
 ];
 
 const Projects = () => {
@@ -54,15 +55,29 @@ const Projects = () => {
           {/* TabsContent */}
           <TabsContent value={category}>
             <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {filteredProjects.map((project, index) => (
+              {category === "mobile app" ? (
                 <div
-                  key={index}
+                  className="col-span-3 flex justify-center items-center h-60"
                   data-aos="fade-up"
-                  data-aos-delay={400 + index * 100}
                 >
-                  <ProjectCard project={project} />
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold mb-4">Coming Soon</h3>
+                    <p className="text-muted-foreground">
+                      My mobile project is under development. Please visit again later.
+                    </p>
+                  </div>
                 </div>
-              ))}
+              ) : (
+                filteredProjects.map((project, index) => (
+                  <div
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={400 + index * 100}
+                  >
+                    <ProjectCard project={project} />
+                  </div>
+                ))
+              )}
             </div>
           </TabsContent>
         </Tabs>
