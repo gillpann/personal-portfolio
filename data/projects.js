@@ -1,6 +1,6 @@
 export const projectData = [
   {
-    image: "/work/coffe.png",
+    image: "/work/akrasiacoffe.png",
     category: "Front End",
     name: "Akrasia Coffe",
     description:
@@ -14,7 +14,7 @@ export const projectData = [
     github: "/",
   },
   {
-    image: "/work/matakuliah.PNG",
+    image: "/work/matakuliah.png",
     category: "Front End",
     name: "Website Matkul UG",
     description:
