@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ahmad-gilvan.vercel.app
+
+# Sitemaps
+Sitemap: https://ahmad-gilvan.vercel.app/sitemap.xml
