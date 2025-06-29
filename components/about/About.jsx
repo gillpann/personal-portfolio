@@ -103,7 +103,7 @@ const About = () => {
                     data-aos="fade-up"
                     data-aos-delay="500"
                   >
-                    Hello everyone??! I'm a passionate and curious developer who
+                    Hello everyone! I'm a passionate and curious developer who
                     loves solving problems through code. As an
                     intermediate-level developer, I'm always eager to explore
                     new technologies and refine my skills. I thrive in both solo
