@@ -84,6 +84,18 @@ export const skillsData = {
       icon: "/skills/mysql.svg",
       description: "Relational database management and querying",
     },
+    {
+      name: "Express JS",
+      level: "Intermediate",
+      icon: "/skills/express.svg",
+      description: "Back-end web framework for building APIs with Node.js",
+    },
+    {
+      name: "MongoDB",
+      level: "Intermediate",
+      icon: "/skills/mongodb.svg",
+      description: "NoSQL database for scalable and flexible data storage",
+    },
   ],
   tools: [
     {

@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "../ui/button";
 import { Download, Send } from "lucide-react";
 import TypingAnimation from "./TypingAnimation";
@@ -15,6 +17,13 @@ import Badge from "./Badge";
 import Socials from "./Socials";
 
 const Hero = () => {
+    const [downloading, setDownloading] = useState(false);
+
+    const handleDownload = () => {
+    setDownloading(true);
+    setTimeout(() => setDownloading(false), 2000); 
+    };
+
     const texts = [
         "Front End Developer",
         "UI/UX Designer",
@@ -80,13 +89,22 @@ const Hero = () => {
                                 </Button>
                             </a>
                             <div data-aos="zoom-in" data-aos-delay="1200">
-                                <Button className="group gap-x-2 bg-secondary hover:bg-secondary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
-                                    <span className="flex items-center gap-2 text-sm md:text-base">
-                                        Download CV
-                                        <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
-                                    </span>
-                                </Button>
-                            </div>
+                                <a
+                                    href="/CV-Ahmad-Gilvan.pdf"
+                                    download
+                                    onClick={handleDownload}
+                                    className="inline-block"
+                                >
+                                    <Button  disabled={downloading} className="group gap-x-2 bg-secondary hover:bg-secondary/80 text-white px-6 py-4 md:px-8 md:py-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                                        {downloading ? "Downloading..." : (
+                                            <span className="flex items-center gap-2 text-sm md:text-base">
+                                                Download CV
+                                                <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                                            </span>
+                                        )}
+                                    </Button>
+                                </a>
+                            </div>  
                         </div>
                         {/* socials */}
                         <Socials

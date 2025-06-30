@@ -1,5 +1,35 @@
 export const projectData = [
   {
+    image: "/work/expensetracker.png",
+    category: "Full Stack",
+    name: "ExpenseTracker",
+    description:
+      "ExpenseTracker is a personal finance web application designed to help users track daily expenses, visualize spending habits with charts, and manage income and expenses effectively.",
+    techStack: [
+      { name: "MongoDB", icon: "mongodb.svg" },
+      { name: "Express", icon: "express.svg" },
+      { name: "Vite", icon: "vite.svg" },
+      { name: "NodeJS", icon: "nodejs.svg" },
+    ],
+    link: "/",
+    github: "https://github.com/gillpann/expense-tracker",
+  },
+  {
+    image: "/work/semina.png",
+    category: "Full Stack",
+    name: "Semina",
+    description:
+      "Semina is a full-stack event management platform that allows users to explore, register, and manage tech seminars. It includes authentication, dashboard, and role-based features to simplify event handling for admins and participants.",
+    techStack: [
+      { name: "MongoDB", icon: "mongodb.svg" },
+      { name: "Express", icon: "express.svg" },
+      { name: "NextJS", icon: "nextjs.svg" },
+      { name: "NodeJS", icon: "nodejs.svg" },
+    ],
+    link: "/",
+    github: "https://github.com/gillpann/fe-landing-semina",
+  },
+  {
     image: "/work/akrasiacoffe.png",
     category: "Front End",
     name: "Akrasia Coffe",
@@ -29,7 +59,7 @@ export const projectData = [
   },
   {
     image: "/work/taskmanager.png",
-    category: "FullStack",
+    category: "Full Stack",
     name: "Taskflow",
     description:
       "Taskflow is an advanced task manager that allows users to create, edit, and delete tasks with an integrated checklist and calendar. It also features a trash bin for recovering deleted tasks.",
