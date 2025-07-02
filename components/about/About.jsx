@@ -99,7 +99,7 @@ const About = () => {
                     The Person Behind the Code
                   </h3>
                   <p
-                    className="subtitle max-w-xl mx-auto xl:mx-0 px-5 xl:px-0"
+                    className="subtitle max-w-xl mx-auto text-justify xl:mx-0 px-5 xl:px-0"
                     data-aos="fade-up"
                     data-aos-delay="500"
                   >

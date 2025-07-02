@@ -63,7 +63,7 @@ const ProjectCard = ({ project }) => {
             ))}
           </div>
 
-          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+          <p className="text-muted-foreground text-sm mb-4 line-clamp-2 text-justify">
             {project.description}
           </p>
 
@@ -114,7 +114,7 @@ const ProjectCard = ({ project }) => {
                     ))}
                   </div>
 
-                  <DialogDescription className="text-base">
+                  <DialogDescription className="text-base text-justify">
                     {project.description}
                   </DialogDescription>
                 </div>
