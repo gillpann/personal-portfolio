@@ -1,8 +1,22 @@
 export const projectData = [
   {
+    image: "/work/hiveoffice.png",
+    category: "Front End",
+    name: "HiveOffice",
+    description:
+      "HiveOffice is a modern office space discovery and booking platform built with Next.js and Tailwind CSS. The application enables users to easily explore available office spaces across Indonesia, view detailed information about each location, and seamlessly book a workspace that fits their needs. With a clean and responsive design, HiveOffice ensures an intuitive browsing experience, featuring dynamic office listings, interactive maps, and detailed office specifications. The platform focuses on usability and efficiency, providing a reliable solution for professionals and businesses looking for flexible office rentals.",
+    techStack: [
+      { name: "Next.js", icon: "nextjs.svg" },
+      { name: "TypeScript", icon: "typescript.svg" },
+      { name: "Tailwind CSS", icon: "tailwind.svg" },
+    ],
+    link: "/",
+    github: "https://github.com/gillpann/Hive-Office"
+  },
+  {
     image: "/work/expensetracker.png",
     category: "Full Stack",
-    name: "ExpenseTracker",
+    name: "Expense Tracker",
     description:
       "ExpenseTracker is a comprehensive personal finance web application built with the MERN stack, designed to empower users with complete control over their financial management. The platform features intuitive expense tracking, dynamic data visualization through interactive charts and graphs, and intelligent categorization of spending patterns. Users can seamlessly manage both income and expenses, set budgets, generate detailed reports, and gain valuable insights into their financial habits. With secure authentication, real-time data synchronization, and responsive design, ExpenseTracker transforms complex financial data into actionable insights for better money management decisions.",
     techStack: [
