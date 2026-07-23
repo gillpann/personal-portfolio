@@ -1,5 +1,19 @@
 export const projectData = [
   {
+  image: "/work/e-rt.png",
+  category: "Full Stack",
+  name: "e-RT Information System",
+  description:
+    "e-RT is a full-stack web-based information system developed to streamline the submission and management of neighborhood administrative cover letters (Surat Pengantar) for RT 03/RW 08, Perumahan Kintamani. The application enables residents to submit requests online, monitor the status of their applications in real time, and access submission history through a responsive interface. Administrators can efficiently manage resident data, process applications, update document statuses, and monitor submission statistics via an interactive dashboard. Built with the PERN stack, the system enhances administrative efficiency, minimizes manual paperwork, and provides a more transparent and organized document management process.",
+  techStack: [
+    { name: "Express", icon: "express.svg" },
+    { name: "Vite", icon: "vite.svg" },
+    { name: "NodeJS", icon: "nodejs.svg" },
+  ],
+  link: "https://ert-warga.vercel.app/",
+  github: "https://github.com/gillpann/e-rt-client",
+},
+  {
     image: "/work/hiveoffice.png",
     category: "Front End",
     name: "HiveOffice",
