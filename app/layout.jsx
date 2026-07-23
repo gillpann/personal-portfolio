@@ -7,7 +7,6 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
-import Chatbot from "@/components/Chatbot";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -56,7 +55,6 @@ export default function RootLayout({ children }) {
                 <Header />
                 {children}
                 <Footer />
-                <Chatbot />
                 <BackToTopButton />
                 <Toaster />
               </>
